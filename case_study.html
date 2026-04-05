@@ -117,7 +117,7 @@
       }
       .hero-img {
         width: 100%;
-        max-height: 520px;
+        /* max-height: 520px; */
         object-fit: cover;
         object-position: center;
         display: block;
@@ -230,7 +230,7 @@
 
       .problem-grid {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
         gap: 1px;
         background: var(--rule);
         border: 1px solid var(--rule);
@@ -242,6 +242,10 @@
         .problem-grid {
           grid-template-columns: 1fr;
         }
+      }
+      .bom-table-wrap {
+        overflow-x: auto;
+        margin: 1.5rem 0;
       }
       .problem-card {
         background: var(--paper-card);
@@ -664,7 +668,7 @@
       <!-- THE CHALLENGE -->
       <section>
         <p class="section-label">The Challenge</p>
-        <h2>Four problems, no complete solution</h2>
+        <h2>Five problems, no complete solution</h2>
         <p>
           Existing products treat these as separate issues. This design treats
           them as one system.
@@ -686,7 +690,8 @@
             <h4>Litter tracking</h4>
             <p>
               No mat or enclosure stops cats from carrying litter beyond the
-              exit. The problem isn't containment — it's exit path geometry.
+              exit. The problem isn't the type of litter you use — it's exit
+              path geometry.
             </p>
           </div>
           <div class="problem-card">
@@ -764,111 +769,297 @@
           Wayfair revealed that every product makes the same scoping decision:
           hide the litter box, ignore everything else.
         </p>
+
         <table class="comp-table">
           <thead>
             <tr>
+              <th style="width: 80px">Photo</th>
               <th>Product</th>
-              <th>Hides litter box</th>
+              <th>Furniture aesthetic</th>
               <th>Hides waste bin</th>
               <th>Litter tracking control</th>
-              <th>Storage</th>
-              <th>Usable top surface</th>
-              <th>Furniture aesthetic</th>
+              <th>Enclosed storage</th>
+              <th>Customisable</th>
+              <th>Price</th>
             </tr>
           </thead>
           <tbody>
-            <!-- <tr>
-              <td>DIY cutting up IKEA furniture </td>
-              <td class="check">✓</td>
-              <td class="cross">✗</td>
-              <td class="cross">✗</td>
-              <td class="cross">✗</td>
-              <td class="check">✓</td>
-              <td class="cross">✓</td>
-            </tr> -->
-            <!-- amazon.com/FEANDREA-Enclosure-Furniture-Nightstand-UPCL002X01/dp/B08H295QB2/ref=zg_bs_g_17592597011_d_sccl_10/133-6828020-2091223?psc=1 -->
             <tr>
-              <td>Feandra</td>
+              <td
+                style="
+                  padding: 0.5rem;
+                  vertical-align: middle;
+                  text-align: center;
+                "
+              >
+                <img
+                  src="images/competitors/tucker_murphy_pet.jpg"
+                  style="
+                    width: 64px;
+                    height: 64px;
+                    object-fit: cover;
+                    border-radius: 4px;
+                  "
+                />
+              </td>
+              <td>Tucker Murphy Pet</td>
               <td class="check">✓</td>
               <td class="cross">✗</td>
-              <td class="cross">✗</td>
-              <td class="cross">✗</td>
+              <td class="check">✓</td>
               <td class="check">✓</td>
               <td class="cross">✗</td>
-            </tr>
-            <!-- amazon.com/Homhedy-Litter-Enclosure-Furniture-Washroom/dp/B0BPPLHTB4/ref=zg_bs_g_17592597011_d_sccl_4/133-6828020-2091223?psc=1 -->
-            <tr>
-              <td>Homehedy</td>
-              <td class="check">✓</td>
-              <td class="cross">✗</td>
-              <td class="cross">✗</td>
-              <td class="cross">✗</td>
-              <td class="check">✓</td>
-              <td class="cross">✗</td>
-            </tr>
-            <!-- https://www.chewy.com/yaheetech-litter-box-furniture-cat/dp/677238 -->
-            <tr>
-              <td>Yaheetech Cat Litter Box Enclosure</td>
-              <td class="check">✓</td>
-              <td class="cross">✗</td>
-              <td class="cross">✗</td>
-              <td class="cross">✗</td>
-              <td class="check">✓</td>
-              <td class="cross">✗</td>
+              <td style="color: var(--ink-muted); font-size: 0.8rem">
+                Budget<br /><span
+                  style="color: var(--ink-faint); font-size: 0.75rem"
+                  >$190</span
+                >
+              </td>
             </tr>
             <tr>
-              <td>PAWLAND Decorative Cat House</td>
-              <td class="check">✓</td>
-              <td class="cross">✗</td>
-              <td class="cross">✗</td>
-              <td class="cross">✗</td>
-              <td class="check">✓</td>
-              <td class="cross">✓</td>
-            </tr>
-            <!-- https://www.amazon.com/s?k=halitaa&adgrpid=183420376061&hvadid=779649876179&hvdev=c&hvexpln=0&hvlocphy=9028297&hvnetw=g&hvocijid=12714700751528501789--&hvqmt=e&hvrand=12714700751528501789&hvtargid=kwd-2009920546739&hydadcr=1876_13437892_16925&mcid=2dc70e1ff2a232aabe8915afe43b0c7e&tag=googhydr-20&ref=pd_sl_5thd455urw_e -->
-            <tr>
+              <td
+                style="
+                  padding: 0.5rem;
+                  vertical-align: middle;
+                  text-align: center;
+                "
+              >
+                <img
+                  src="images/competitors/halitaa.jpg"
+                  style="
+                    width: 64px;
+                    height: 64px;
+                    object-fit: cover;
+                    border-radius: 4px;
+                  "
+                />
+              </td>
               <td>Halitaa</td>
               <td class="check">✓</td>
               <td class="cross">✗</td>
-              <td class="cross">✗</td>
-              <td class="cross">✗</td>
               <td class="check">✓</td>
               <td class="cross">✗</td>
+              <td class="cross">✗</td>
+              <td style="color: var(--ink-muted); font-size: 0.8rem">
+                Budget<br /><span
+                  style="color: var(--ink-faint); font-size: 0.75rem"
+                  >$110</span
+                >
+              </td>
             </tr>
             <tr>
-              <td>Litter-Robot 4 (automatic)</td>
+              <td
+                style="
+                  padding: 0.5rem;
+                  vertical-align: middle;
+                  text-align: center;
+                "
+              >
+                <img
+                  src="images/competitors/homhedy.jpg"
+                  style="
+                    width: 64px;
+                    height: 64px;
+                    object-fit: cover;
+                    border-radius: 4px;
+                  "
+                />
+              </td>
+              <td>Homhedy</td>
               <td class="check">✓</td>
-              <td class="check">✓</td>
               <td class="cross">✗</td>
               <td class="cross">✗</td>
               <td class="cross">✗</td>
               <td class="cross">✗</td>
+              <td style="color: var(--ink-muted); font-size: 0.8rem">
+                Budget<br /><span
+                  style="color: var(--ink-faint); font-size: 0.75rem"
+                  >$80</span
+                >
+              </td>
             </tr>
             <tr>
-              <td>IKEA LURVIG hack</td>
+              <td
+                style="
+                  padding: 0.5rem;
+                  vertical-align: middle;
+                  text-align: center;
+                "
+              >
+                <img
+                  src="images/competitors/hoobro.jpg"
+                  style="
+                    width: 64px;
+                    height: 64px;
+                    object-fit: cover;
+                    border-radius: 4px;
+                  "
+                />
+              </td>
+              <td>Hoobro</td>
+              <td class="cross">✗</td>
+              <td class="cross">✗</td>
+              <td class="check">✓</td>
+              <td class="cross">✗</td>
+              <td class="cross">✗</td>
+              <td style="color: var(--ink-muted); font-size: 0.8rem">
+                Mid<br /><span
+                  style="color: var(--ink-faint); font-size: 0.75rem"
+                  >$117</span
+                >
+              </td>
+            </tr>
+            <tr>
+              <td
+                style="
+                  padding: 0.5rem;
+                  vertical-align: middle;
+                  text-align: center;
+                "
+              >
+                <img
+                  src="images/competitors/ebern_designs.jpg"
+                  style="
+                    width: 64px;
+                    height: 64px;
+                    object-fit: cover;
+                    border-radius: 4px;
+                  "
+                />
+              </td>
+              <td>Ebern Designs</td>
+              <td class="cross">✗</td>
+              <td class="cross">✗</td>
+              <td class="check">✓</td>
+              <td class="cross">✗</td>
+              <td class="cross">✗</td>
+              <td style="color: var(--ink-muted); font-size: 0.8rem">
+                Budget<br /><span
+                  style="color: var(--ink-faint); font-size: 0.75rem"
+                  >$250</span
+                >
+              </td>
+            </tr>
+            <tr>
+              <td
+                style="
+                  padding: 0.5rem;
+                  vertical-align: middle;
+                  text-align: center;
+                "
+              >
+                <img
+                  src="images/competitors/litter_robot.jpg"
+                  style="
+                    width: 64px;
+                    height: 64px;
+                    object-fit: cover;
+                    border-radius: 4px;
+                  "
+                />
+              </td>
+              <td>Litter-Robot (automatic)</td>
+              <td class="cross">✗</td>
               <td class="check">✓</td>
               <td class="cross">✗</td>
               <td class="cross">✗</td>
               <td class="cross">✗</td>
-              <td class="check">✓</td>
-              <td class="check">✓</td>
+              <td style="color: var(--ink-muted); font-size: 0.8rem">
+                Premium<br /><span
+                  style="color: var(--ink-faint); font-size: 0.75rem"
+                  >$600–900</span
+                >
+              </td>
+            </tr>
+            <tr>
+              <td
+                style="
+                  padding: 0.5rem;
+                  vertical-align: middle;
+                  text-align: center;
+                "
+              >
+                <img
+                  src="images/competitors/lifewit.jpg"
+                  style="
+                    width: 64px;
+                    height: 64px;
+                    object-fit: cover;
+                    border-radius: 4px;
+                  "
+                />
+              </td>
+              <td>Lifewit</td>
+              <td class="cross">✗</td>
+              <td class="cross">✗</td>
+              <td class="cross">✗</td>
+              <td class="cross">✗</td>
+              <td class="cross">✗</td>
+              <td style="color: var(--ink-muted); font-size: 0.8rem">
+                Budget<br /><span
+                  style="color: var(--ink-faint); font-size: 0.75rem"
+                  >$70</span
+                >
+              </td>
             </tr>
             <tr class="this-design">
+              <td
+                style="
+                  padding: 0.5rem;
+                  vertical-align: middle;
+                  text-align: center;
+                  background: var(--accent-light);
+                "
+              >
+                <div
+                  style="
+                    width: 64px;
+                    height: 64px;
+                    background: #e8efe8;
+                    border-radius: 4px;
+                    border: 1px solid #8aac8b;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 0.65rem;
+                    color: #3d5a3e;
+                    text-align: center;
+                    line-height: 1.3;
+                  "
+                >
+                  your<br />render
+                </div>
+              </td>
               <td>This design</td>
               <td class="check">✓</td>
               <td class="check">✓</td>
               <td class="check">✓</td>
               <td class="check">✓</td>
               <td class="check">✓</td>
-              <td class="check">✓</td>
+              <td
+                style="
+                  color: var(--accent);
+                  font-size: 0.8rem;
+                  font-weight: 500;
+                  background: var(--accent-light);
+                "
+              >
+                Mid<br /><span
+                  style="color: var(--accent-mid); font-size: 0.75rem"
+                  >~$249–399</span
+                >
+              </td>
             </tr>
           </tbody>
         </table>
         <p>
-          Notably, no product reviewed included any diagram or documentation
-          showing where the waste bin should go. That omission in marketing
-          materials reflects a genuine gap in the product design itself — not
-          just in communication.
+          Most products in this category are budget enclosures that solve
+          exactly one thing: hiding the litter box. None address litter
+          tracking, waste storage, enclosed owner storage, or customisation. The
+          Litter-Robot is the only competitor that manages waste — but at
+          $600–900, it requires power, produces no usable storage, and has no
+          furniture aesthetic. Tucker Murphy Pet comes closest to a complete
+          solution, with a furniture look and some storage, but still leaves the
+          waste bin exposed and litter uncontrolled.
         </p>
       </section>
 
@@ -881,6 +1072,180 @@
           dimensional and ergonomic requirements — for the cat, for common
           cleaning hardware, and for the space itself.
         </p>
+
+        <h3>Design constraints</h3>
+        <p>
+          Before any layout work, I defined a set of non-negotiable constraints
+          — requirements the design had to satisfy completely, not partially.
+          These drove every dimension and structural decision in the CAD model.
+        </p>
+
+        <div class="process-steps" style="margin-bottom: 2rem">
+          <div class="process-step">
+            <div
+              class="process-step-num"
+              style="
+                font-size: 0.75rem;
+                font-family: var(--sans);
+                letter-spacing: 0.05em;
+                padding-top: 1.35rem;
+              "
+            >
+              C1
+            </div>
+            <div class="process-step-body">
+              <h4>Must fit a large litter box</h4>
+              <p>
+                The interior chamber needed to accommodate the largest commonly
+                sold enclosed litter boxes — not just a standard size — so the
+                design wouldn't exclude cats that require extra space or owners
+                already invested in a specific box. This set the minimum
+                interior width and depth of the litter compartment.
+              </p>
+            </div>
+          </div>
+          <div class="process-step">
+            <div
+              class="process-step-num"
+              style="
+                font-size: 0.75rem;
+                font-family: var(--sans);
+                letter-spacing: 0.05em;
+                padding-top: 1.35rem;
+              "
+            >
+              C2
+            </div>
+            <div class="process-step-body">
+              <h4>Must accommodate a litter waste bin</h4>
+              <p>
+                The Litter Genie and Litter Zero are the most common dedicated
+                litter waste bins. Their dimensions set the minimum depth and
+                height of the secondary compartment. This was non-negotiable —
+                it was the core gap the entire design was built to close.
+              </p>
+            </div>
+          </div>
+          <div class="process-step">
+            <div
+              class="process-step-num"
+              style="
+                font-size: 0.75rem;
+                font-family: var(--sans);
+                letter-spacing: 0.05em;
+                padding-top: 1.35rem;
+              "
+            >
+              C3
+            </div>
+            <div class="process-step-body">
+              <h4>Ventilation without sacrificing aesthetics</h4>
+              <p>
+                An enclosed litter area traps ammonia from cat waste, which can
+                discourage use and is a health concern over time. The enclosure
+                needed a passive ventilation solution — whether through gap
+                geometry, louvres, or a hidden charcoal filter — that didn't
+                introduce visible cutouts or grilles that would undermine the
+                furniture aesthetic.
+              </p>
+            </div>
+          </div>
+          <div class="process-step">
+            <div
+              class="process-step-num"
+              style="
+                font-size: 0.75rem;
+                font-family: var(--sans);
+                letter-spacing: 0.05em;
+                padding-top: 1.35rem;
+              "
+            >
+              C4
+            </div>
+            <div class="process-step-body">
+              <h4>The cat must easily find and access the litter box</h4>
+              <p>
+                If the entry path is confusing, poorly lit, or physically
+                demanding, cats will avoid the enclosure and eliminate
+                elsewhere. The corridor geometry, entry aperture, and step-over
+                height all had to be optimised for instinctive, frictionless
+                use. A cat who is unsure or uncomfortable will not use it.
+              </p>
+            </div>
+          </div>
+          <div class="process-step">
+            <div
+              class="process-step-num"
+              style="
+                font-size: 0.75rem;
+                font-family: var(--sans);
+                letter-spacing: 0.05em;
+                padding-top: 1.35rem;
+              "
+            >
+              C5
+            </div>
+            <div class="process-step-body">
+              <h4>
+                Must fit in an apartment — minimum footprint, full functionality
+              </h4>
+              <p>
+                The target user lives in a 600–900 sq ft urban apartment. Every
+                square inch the enclosure occupies has to earn its place. The
+                design was sized to the smallest viable footprint that still
+                satisfied constraints C1 through C4 — no dimension was generous
+                by default.
+              </p>
+            </div>
+          </div>
+          <div class="process-step">
+            <div
+              class="process-step-num"
+              style="
+                font-size: 0.75rem;
+                font-family: var(--sans);
+                letter-spacing: 0.05em;
+                padding-top: 1.35rem;
+              "
+            >
+              C6
+            </div>
+            <div class="process-step-body">
+              <h4>Surplus storage — useful beyond cat ownership</h4>
+              <p>
+                The enclosure had to justify its footprint to non-cat-owners in
+                the household too. Drawers, shelves, or cabinet space for
+                non-cat items — blankets, cleaning supplies, books — make the
+                piece furniture first, cat product second. This is also what
+                allows it to live in a living room rather than a utility room.
+              </p>
+            </div>
+          </div>
+          <div class="process-step">
+            <div
+              class="process-step-num"
+              style="
+                font-size: 0.75rem;
+                font-family: var(--sans);
+                letter-spacing: 0.05em;
+                padding-top: 1.35rem;
+              "
+            >
+              C7
+            </div>
+            <div class="process-step-body">
+              <h4>Modular — swappable panels, legs, and finishes</h4>
+              <p>
+                IKEA's success is partly built on mix-and-match modularity:
+                owners personalise their furniture without replacing the whole
+                piece. This design follows the same principle — tabletop colour,
+                base colour, door and drawer faces, leg height, and textures are
+                all independently swappable. This expands the addressable market
+                significantly without increasing manufacturing complexity.
+              </p>
+            </div>
+          </div>
+        </div>
 
         <h3>Feline ergonomics</h3>
         <p>
@@ -906,61 +1271,25 @@
               <td>Full standing, turning, and periscoping</td>
             </tr>
             <tr>
-              <td>Step-over entry height</td>
-              <td>3″ – 5″</td>
-              <td>7.5 – 12.5 cm</td>
-              <td>Accessible for senior and mobility-limited cats</td>
-            </tr>
-            <tr>
               <td>Tunnel / corridor diameter</td>
               <td>8″ – 10″</td>
               <td>20 – 25 cm</td>
               <td>Neutral spine posture while walking through</td>
             </tr>
             <tr>
-              <td>Step rise (if stairs included)</td>
+              <td>Walk-over height</td>
+              <td>3″ – 5″</td>
+              <td>7.5 – 12.5 cm</td>
+              <td>Accessible for senior and mobility-limited cats</td>
+            </tr>
+            <tr>
+              <td>Step-down height</td>
               <td>5″ – 7″</td>
               <td>12.5 – 17.8 cm</td>
               <td>Reduces forelimb load for older cats on descent</td>
             </tr>
           </tbody>
         </table>
-
-        <h3>Robot vacuum clearance</h3>
-        <p>
-          The base of the enclosure needed enough ground clearance to let a
-          robot vacuum pass underneath — eliminating one of the most tedious
-          cleaning tasks for cat owners.
-        </p>
-        <table class="spec-table">
-          <thead>
-            <tr>
-              <th>Robot type</th>
-              <th>Required clearance</th>
-              <th>Source</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Standard (no LiDAR)</td>
-              <td>3.8″ – 4.0″</td>
-              <td>iRobot Roomba j/s series specs; RTINGS.com testing</td>
-            </tr>
-            <tr>
-              <td>LiDAR turret (Roborock, Dreame)</td>
-              <td>4.2″ – 4.5″</td>
-              <td>Roborock S8 Pro Ultra teardown; RTINGS.com</td>
-            </tr>
-          </tbody>
-        </table>
-        <div class="insight">
-          <p>
-            <strong>Key insight:</strong> Standard manufacturer height specs
-            understate real-world clearance needs by 0.25–0.5″ due to suspension
-            compression on rug transitions. The design targets 4.5″ ground
-            clearance to cover both robot types without adjustment.
-          </p>
-        </div>
 
         <h3>User insights</h3>
         <p>
@@ -1011,9 +1340,11 @@
             <div class="persona-attrs">
               <span class="tag">Has tried litter mats</span>
               <span class="tag">Has tried enclosures</span>
-              <span class="tag">Owns a robot vacuum</span>
               <span class="tag">Curates their living space</span>
               <span class="tag">Shops IKEA, CB2, West Elm</span>
+              <span class="tag"
+                >Wants furniture that grows with their life</span
+              >
               <span class="tag">Not interested in cat-themed décor</span>
             </div>
           </div>
@@ -1023,7 +1354,7 @@
       <!-- THE SOLUTION -->
       <section>
         <p class="section-label">The Solution</p>
-        <h2>One piece. Four problems solved.</h2>
+        <h2>One piece. Five problems solved.</h2>
         <p>
           The design is a furniture-grade enclosure with a clean top surface,
           neutral material finish, and no cat-signaling aesthetic cues. From the
@@ -1324,10 +1655,12 @@
             <div class="process-step-body">
               <h4>Establish non-negotiable constraints</h4>
               <p>
-                Feline ergonomics, robot vacuum clearance, and litter waste bin
-                dimensions were researched and locked before any layout
-                decisions. These numbers drove the internal geometry rather than
-                being retrofitted afterward.
+                Seven constraints were locked before any layout decisions:
+                litter box size, waste bin size, ventilation, cat accessibility,
+                apartment-sized footprint, owner storage utility, and modular
+                finishes. These drove every dimension in the CAD model rather
+                than being retrofitted later. See the Research section for the
+                full constraint breakdown.
               </p>
             </div>
           </div>
@@ -2086,9 +2419,9 @@
         </div>
 
         <p class="sample-notice">
-          <strong>Sample content</strong> Replace the paragraph below with your
-          actual material choices, panel thickness, joinery method, and
-          flat-pack vs. finished assembly decision.
+          <strong>Fill in</strong> Replace this paragraph with your actual
+          material choices, panel thickness, and joinery method from your
+          Onshape model.
         </p>
         <p>
           The enclosure is designed around ¾″ (19mm) furniture-grade plywood
@@ -2098,6 +2431,137 @@
           reduction. All interior surfaces use a low-VOC paint for easy
           wipe-down cleaning.
         </p>
+
+        <h3>Bill of materials</h3>
+        <p>
+          Every component in the design — panels, fasteners, cam-locks, hinges,
+          drawer slides, legs, and ventilation inserts — is fully specified in
+          the Onshape model. Each part is parametric, meaning a change to a
+          panel thickness or leg height propagates through the entire assembly
+          automatically. The BOM below is a placeholder structure; export yours
+          directly from Onshape and drop it in.
+        </p>
+
+        <p class="sample-notice">
+          <strong>Fill in</strong> Export your BOM from Onshape (File → Export →
+          BOM) and replace the table below with your actual part list. This
+          section is one of the strongest signals of manufacturing readiness in
+          the entire case study — don't skip it.
+        </p>
+
+        <div class="bom-table-wrap">
+          <table class="spec-table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Component</th>
+                <th>Material / Spec</th>
+                <th>Qty</th>
+                <th>Notes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Top panel</td>
+                <td>¾″ plywood, oak veneer</td>
+                <td>1</td>
+                <td>Optional wire cutout, edge banding</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Left side panel</td>
+                <td>¾″ plywood, oak veneer</td>
+                <td>1</td>
+                <td>—</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Right side panel</td>
+                <td>¾″ plywood, oak veneer</td>
+                <td>1</td>
+                <td>Cat entry aperture routed</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Back panel</td>
+                <td>¼″ HDF or plywood</td>
+                <td>1</td>
+                <td>Ventilation gap at top edge</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>Partition wall (waste bin divider)</td>
+                <td>¾″ plywood</td>
+                <td>1</td>
+                <td>—</td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>Maze corridor walls</td>
+                <td>½″ MDF</td>
+                <td>3</td>
+                <td>U-shape: 2 vertical + 1 horizontal</td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>Door panel(s)</td>
+                <td>¾″ MDF or plywood, swappable face</td>
+                <td>2–3</td>
+                <td>Fill in — confirm count from Onshape</td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>Drawer face(s)</td>
+                <td>¾″ MDF, swappable face</td>
+                <td>1–2</td>
+                <td>Fill in — confirm count from Onshape</td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td>Legs</td>
+                <td>Solid wood or metal, threaded insert mount</td>
+                <td>4</td>
+                <td>Swappable — short / standard / tall</td>
+              </tr>
+              <tr>
+                <td>10</td>
+                <td>Cam-lock fasteners</td>
+                <td>Zinc alloy, 15mm</td>
+                <td>—</td>
+                <td>Fill in exact quantity from Onshape BOM</td>
+              </tr>
+              <tr>
+                <td>11</td>
+                <td>Confirmat screws</td>
+                <td>Steel, 7×50mm</td>
+                <td>—</td>
+                <td>Fill in exact quantity from Onshape BOM</td>
+              </tr>
+              <tr>
+                <td>12</td>
+                <td>Concealed hinges</td>
+                <td>35mm cup hinge, soft-close</td>
+                <td>—</td>
+                <td>Fill in quantity — 2 per door minimum</td>
+              </tr>
+              <tr>
+                <td>13</td>
+                <td>Drawer slides</td>
+                <td>Full-extension, undermount</td>
+                <td>—</td>
+                <td>Fill in quantity from Onshape BOM</td>
+              </tr>
+              <tr>
+                <td>14</td>
+                <td>Charcoal odour filter</td>
+                <td>Activated carbon insert</td>
+                <td>1</td>
+                <td>Mounted behind ventilation gap, user-replaceable</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
         <!-- KEY FEATURES -->
         <div class="feature-row" style="margin-top: 3rem">
@@ -2491,8 +2955,11 @@
                 designed for plants, books, a lamp, or any decorative items that
                 make a surface feel intentional rather than incidental. An
                 optional wire management cutout accommodates a lamp or charging
-                cable without surface clutter. The enclosure earns its floor
-                space by functioning as furniture in both directions.
+                cable without surface clutter. Doors use a push-to-open latch
+                mechanism, keeping the front face completely hardware-free and
+                flush with the furniture aesthetic — no handles, no visible
+                hinges. The enclosure earns its floor space by functioning as
+                furniture in both directions.
               </p>
             </div>
           </div>
@@ -2646,14 +3113,14 @@
         </div>
 
         <div class="feature-row">
-          <!-- SVG: Ground clearance side view -->
+          <!-- SVG: Modular leg variants -->
           <div class="diagram-frame" style="margin: 0; align-self: center">
             <svg
-              viewBox="0 0 320 188"
+              viewBox="0 0 320 200"
               xmlns="http://www.w3.org/2000/svg"
-              style="height: 188px"
+              style="height: 200px"
             >
-              <rect width="320" height="188" fill="#f7f5f0" />
+              <rect width="320" height="200" fill="#f7f5f0" />
               <text
                 x="160"
                 y="18"
@@ -2663,155 +3130,497 @@
                 text-anchor="middle"
                 letter-spacing="1"
               >
-                GROUND CLEARANCE — SIDE VIEW
+                MODULAR LEGS — THREE VARIANTS
               </text>
+              <!-- floor line -->
               <line
-                x1="18"
-                y1="154"
-                x2="302"
-                y2="154"
+                x1="16"
+                y1="172"
+                x2="304"
+                y2="172"
                 stroke="#d8d5cc"
                 stroke-width="1.5"
               />
-              <text
-                x="160"
-                y="170"
-                font-family="'DM Sans',sans-serif"
-                font-size="8"
-                fill="#d8d5cc"
-                text-anchor="middle"
-              >
-                floor
-              </text>
+              <!-- Variant A: Short (senior cats) -->
               <rect
-                x="54"
-                y="50"
-                width="212"
+                x="28"
+                y="60"
+                width="72"
                 height="88"
                 rx="3"
                 fill="#edeae2"
                 stroke="#d8d5cc"
                 stroke-width="1.5"
               />
-              <!-- legs -->
               <rect
-                x="62"
-                y="138"
-                width="14"
-                height="16"
+                x="34"
+                y="148"
+                width="10"
+                height="24"
                 rx="2"
-                fill="#d8d5cc"
-                stroke="#b0afa6"
+                fill="#8aac8b"
+                stroke="#3d5a3e"
                 stroke-width="1"
               />
               <rect
-                x="244"
-                y="138"
-                width="14"
-                height="16"
+                x="80"
+                y="148"
+                width="10"
+                height="24"
                 rx="2"
-                fill="#d8d5cc"
-                stroke="#b0afa6"
-                stroke-width="1"
-              />
-              <!-- clearance brace -->
-              <line
-                x1="38"
-                y1="138"
-                x2="38"
-                y2="154"
+                fill="#8aac8b"
                 stroke="#3d5a3e"
                 stroke-width="1"
               />
               <line
-                x1="34"
-                y1="138"
-                x2="42"
-                y2="138"
+                x1="16"
+                y1="148"
+                x2="16"
+                y2="172"
                 stroke="#3d5a3e"
                 stroke-width="1"
               />
               <line
-                x1="34"
-                y1="154"
-                x2="42"
-                y2="154"
+                x1="12"
+                y1="148"
+                x2="20"
+                y2="148"
+                stroke="#3d5a3e"
+                stroke-width="1"
+              />
+              <line
+                x1="12"
+                y1="172"
+                x2="20"
+                y2="172"
                 stroke="#3d5a3e"
                 stroke-width="1"
               />
               <text
-                x="14"
-                y="148"
+                x="64"
+                y="145"
                 font-family="'DM Sans',sans-serif"
-                font-size="9"
+                font-size="8"
+                fill="#3d5a3e"
+              >
+                2.5″
+              </text>
+              <text
+                x="64"
+                y="187"
+                font-family="'DM Sans',sans-serif"
+                font-size="8.5"
+                fill="#3d5a3e"
+                text-anchor="middle"
+              >
+                Short
+              </text>
+              <text
+                x="64"
+                y="198"
+                font-family="'DM Sans',sans-serif"
+                font-size="7.5"
+                fill="#b0afa6"
+                text-anchor="middle"
+              >
+                senior cats
+              </text>
+              <!-- Variant B: Standard -->
+              <rect
+                x="124"
+                y="44"
+                width="72"
+                height="88"
+                rx="3"
+                fill="#edeae2"
+                stroke="#d8d5cc"
+                stroke-width="1.5"
+              />
+              <rect
+                x="130"
+                y="132"
+                width="10"
+                height="40"
+                rx="2"
+                fill="#3d5a3e"
+                stroke="#3d5a3e"
+                stroke-width="1"
+              />
+              <rect
+                x="176"
+                y="132"
+                width="10"
+                height="40"
+                rx="2"
+                fill="#3d5a3e"
+                stroke="#3d5a3e"
+                stroke-width="1"
+              />
+              <line
+                x1="112"
+                y1="132"
+                x2="112"
+                y2="172"
+                stroke="#3d5a3e"
+                stroke-width="1"
+              />
+              <line
+                x1="108"
+                y1="132"
+                x2="116"
+                y2="132"
+                stroke="#3d5a3e"
+                stroke-width="1"
+              />
+              <line
+                x1="108"
+                y1="172"
+                x2="116"
+                y2="172"
+                stroke="#3d5a3e"
+                stroke-width="1"
+              />
+              <text
+                x="105"
+                y="154"
+                font-family="'DM Sans',sans-serif"
+                font-size="8"
                 fill="#3d5a3e"
               >
                 4.5″
               </text>
-              <!-- robot vacuum -->
-              <rect
-                x="82"
-                y="141"
-                width="54"
-                height="13"
-                rx="6.5"
-                fill="#6b6b62"
-                opacity="0.25"
-              />
-              <circle cx="148" cy="147" r="5" fill="#6b6b62" opacity="0.3" />
               <text
-                x="124"
-                y="136"
+                x="160"
+                y="187"
+                font-family="'DM Sans',sans-serif"
+                font-size="8.5"
+                fill="#3d5a3e"
+                text-anchor="middle"
+              >
+                Standard
+              </text>
+              <text
+                x="160"
+                y="198"
+                font-family="'DM Sans',sans-serif"
+                font-size="7.5"
+                fill="#b0afa6"
+                text-anchor="middle"
+              >
+                default height
+              </text>
+              <!-- Variant C: Tall -->
+              <rect
+                x="220"
+                y="28"
+                width="72"
+                height="88"
+                rx="3"
+                fill="#edeae2"
+                stroke="#d8d5cc"
+                stroke-width="1.5"
+              />
+              <rect
+                x="226"
+                y="116"
+                width="10"
+                height="56"
+                rx="2"
+                fill="#d8d5cc"
+                stroke="#b0afa6"
+                stroke-width="1"
+              />
+              <rect
+                x="272"
+                y="116"
+                width="10"
+                height="56"
+                rx="2"
+                fill="#d8d5cc"
+                stroke="#b0afa6"
+                stroke-width="1"
+              />
+              <line
+                x1="208"
+                y1="116"
+                x2="208"
+                y2="172"
+                stroke="#b0afa6"
+                stroke-width="1"
+              />
+              <line
+                x1="204"
+                y1="116"
+                x2="212"
+                y2="116"
+                stroke="#b0afa6"
+                stroke-width="1"
+              />
+              <line
+                x1="204"
+                y1="172"
+                x2="212"
+                y2="172"
+                stroke="#b0afa6"
+                stroke-width="1"
+              />
+              <text
+                x="200"
+                y="146"
                 font-family="'DM Sans',sans-serif"
                 font-size="8"
+                fill="#b0afa6"
+              >
+                7″
+              </text>
+              <text
+                x="256"
+                y="187"
+                font-family="'DM Sans',sans-serif"
+                font-size="8.5"
                 fill="#6b6b62"
                 text-anchor="middle"
               >
-                robot vacuum fits
+                Tall
               </text>
-              <defs>
-                <marker
-                  id="gd"
-                  markerWidth="5"
-                  markerHeight="5"
-                  refX="2.5"
-                  refY="2.5"
-                  orient="auto"
-                >
-                  <polygon
-                    points="0,0 5,2.5 0,5"
-                    fill="#6b6b62"
-                    opacity="0.4"
-                  />
-                </marker>
-              </defs>
-              <line
-                x1="148"
-                y1="147"
-                x2="210"
-                y2="147"
-                stroke="#6b6b62"
-                stroke-width="1"
-                stroke-dasharray="3,2"
-                opacity="0.4"
-                marker-end="url(#gd)"
-              />
+              <text
+                x="256"
+                y="198"
+                font-family="'DM Sans',sans-serif"
+                font-size="7.5"
+                fill="#b0afa6"
+                text-anchor="middle"
+              >
+                aesthetic preference
+              </text>
             </svg>
             <p class="diagram-caption">
-              4.5″ ground clearance — accommodates LiDAR robot vacuums.
+              Swappable leg variants — the same cabinet base accepts any leg
+              height. Replace with CAD render.
             </p>
           </div>
           <div>
             <div class="feature-number">04</div>
             <div class="feature-text">
-              <h3>Robot vacuum clearance</h3>
+              <h3>Modular legs</h3>
               <p>
-                The base of the enclosure is raised to a minimum 4.5″ ground
-                clearance — enough to accommodate both standard and
-                LiDAR-equipped robot vacuums. This removes the need to manually
-                clean under the unit and means the corridor floor — where
-                tracked litter accumulates — is automatically cleaned on the
-                robot's regular cycle.
+                The enclosure sits on swappable legs rather than a fixed base.
+                This serves two independent purposes. First, it lets owners
+                match the leg height to the aesthetic of their space — shorter
+                legs for a low-profile Scandinavian look, taller legs for a
+                mid-century silhouette. Second, and more practically, shorter
+                legs lower the step-up height for senior or mobility-limited
+                cats who may struggle to enter a raised enclosure, removing a
+                barrier to consistent litter box use without changing anything
+                else about the design.
+              </p>
+              <p>
+                Robot vacuum clearance is a welcome side-effect of the standard
+                leg height — but it is not the reason for this design decision.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="feature-row">
+          <!-- SVG: Ventilation diagram -->
+          <div class="diagram-frame" style="margin: 0; align-self: center">
+            <svg
+              viewBox="0 0 320 200"
+              xmlns="http://www.w3.org/2000/svg"
+              style="height: 200px"
+            >
+              <rect width="320" height="200" fill="#f7f5f0" />
+              <text
+                x="160"
+                y="18"
+                font-family="'DM Sans',sans-serif"
+                font-size="10"
+                fill="#b0afa6"
+                text-anchor="middle"
+                letter-spacing="1"
+              >
+                VENTILATION — SECTION VIEW
+              </text>
+              <!-- cabinet outline -->
+              <rect
+                x="50"
+                y="28"
+                width="220"
+                height="148"
+                rx="3"
+                fill="#fff"
+                stroke="#d8d5cc"
+                stroke-width="1.5"
+              />
+              <!-- back panel gap at top (ventilation) -->
+              <rect
+                x="50"
+                y="28"
+                width="220"
+                height="6"
+                rx="1"
+                fill="#e8efe8"
+                stroke="#3d5a3e"
+                stroke-width="1"
+              />
+              <text
+                x="170"
+                y="24"
+                font-family="'DM Sans',sans-serif"
+                font-size="8"
+                fill="#3d5a3e"
+                text-anchor="middle"
+              >
+                ventilation gap
+              </text>
+              <!-- charcoal filter icon on back wall -->
+              <rect
+                x="56"
+                y="34"
+                width="18"
+                height="30"
+                rx="2"
+                fill="#e8efe8"
+                stroke="#3d5a3e"
+                stroke-width="1"
+              />
+              <text
+                x="65"
+                y="44"
+                font-family="'DM Sans',sans-serif"
+                font-size="6.5"
+                fill="#3d5a3e"
+                text-anchor="middle"
+              >
+                filter
+              </text>
+              <!-- litter box zone -->
+              <rect
+                x="60"
+                y="70"
+                width="100"
+                height="96"
+                rx="2"
+                fill="#edeae2"
+                stroke="#d8d5cc"
+                stroke-width="1"
+              />
+              <text
+                x="110"
+                y="121"
+                font-family="'DM Sans',sans-serif"
+                font-size="8.5"
+                fill="#b0afa6"
+                text-anchor="middle"
+              >
+                litter box
+              </text>
+              <!-- ammonia arrows rising -->
+              <path
+                d="M100 68 Q96 58 100 48"
+                fill="none"
+                stroke="#b04040"
+                stroke-width="1"
+                stroke-dasharray="3,2"
+                opacity="0.6"
+              />
+              <path
+                d="M112 68 Q116 56 112 44"
+                fill="none"
+                stroke="#b04040"
+                stroke-width="1"
+                stroke-dasharray="3,2"
+                opacity="0.6"
+              />
+              <path
+                d="M124 68 Q120 56 124 44"
+                fill="none"
+                stroke="#b04040"
+                stroke-width="1"
+                stroke-dasharray="3,2"
+                opacity="0.5"
+              />
+              <text
+                x="110"
+                y="42"
+                font-family="'DM Sans',sans-serif"
+                font-size="7.5"
+                fill="#b04040"
+                text-anchor="middle"
+                opacity="0.7"
+              >
+                NH₃
+              </text>
+              <!-- clean air arrow through filter -->
+              <path
+                d="M74 48 L74 38 L270 38 L270 28"
+                fill="none"
+                stroke="#3d5a3e"
+                stroke-width="1.5"
+                stroke-dasharray="4,2"
+              />
+              <polygon points="267,22 270,28 273,22" fill="#3d5a3e" />
+              <text
+                x="200"
+                y="35"
+                font-family="'DM Sans',sans-serif"
+                font-size="8"
+                fill="#3d5a3e"
+              >
+                filtered exhaust
+              </text>
+              <!-- entry aperture -->
+              <rect
+                x="160"
+                y="130"
+                width="22"
+                height="34"
+                rx="2"
+                fill="#e8efe8"
+                stroke="#3d5a3e"
+                stroke-width="1"
+              />
+              <text
+                x="198"
+                y="151"
+                font-family="'DM Sans',sans-serif"
+                font-size="8"
+                fill="#b0afa6"
+              >
+                cat entry
+              </text>
+              <line
+                x1="182"
+                y1="148"
+                x2="194"
+                y2="148"
+                stroke="#b0afa6"
+                stroke-width="0.75"
+              />
+            </svg>
+            <p class="diagram-caption">
+              Passive ventilation — ammonia rises through a charcoal filter
+              hidden behind the back panel gap. Replace with CAD section view.
+            </p>
+          </div>
+          <div>
+            <div class="feature-number">05</div>
+            <div class="feature-text">
+              <h3>Passive ventilation</h3>
+              <p>
+                An enclosed litter space traps ammonia — the primary odour
+                compound in cat waste. Left unaddressed, buildup discourages
+                cats from using the box. The enclosure uses a passive
+                ventilation path: a concealed gap along the top of the back
+                panel draws air upward through a user-replaceable activated
+                charcoal filter insert. There are no visible grilles, no powered
+                fans, and no aesthetic compromise.
+              </p>
+              <p>
+                The filter is accessible from the rear without tools and
+                replaceable on the same schedule as a standard charcoal filter —
+                roughly every 4–6 weeks.
               </p>
             </div>
           </div>
@@ -2819,9 +3628,9 @@
 
         <h3>Design specifications</h3>
         <p class="sample-notice">
-          <strong>Sample content</strong> Replace the footprint, panel material,
-          and assembly method rows with your actual Onshape dimensions and
-          confirmed material spec.
+          <strong>Fill in</strong> Replace the footprint, panel material, and
+          assembly method rows with your actual Onshape dimensions and confirmed
+          material spec.
         </p>
         <table class="spec-table">
           <thead>
@@ -2849,8 +3658,17 @@
               <td>10″ (cat), step-over 4″</td>
             </tr>
             <tr>
-              <td>Ground clearance</td>
-              <td>4.5″ (robot vacuum compatible)</td>
+              <td>Ventilation</td>
+              <td>
+                Passive — concealed back-panel gap with user-replaceable
+                activated charcoal filter
+              </td>
+            </tr>
+            <tr>
+              <td>Leg height</td>
+              <td>
+                Modular — short (2.5″), standard (4.5″), tall (7″) variants
+              </td>
             </tr>
             <tr>
               <td>Panel material</td>
@@ -2880,7 +3698,16 @@
             </tr>
             <tr>
               <td>Modeled in</td>
-              <td>Onshape</td>
+              <td>
+                Onshape — all panels, hardware, and fasteners fully parametric
+              </td>
+            </tr>
+            <tr>
+              <td>Bill of materials</td>
+              <td>
+                Complete — every screw, cam-lock, and bracket specified with
+                part number and quantity
+              </td>
             </tr>
           </tbody>
         </table>
@@ -2961,8 +3788,8 @@
             <p>
               Existing products were designed around a single pain point.
               Designing around the entire ecosystem — litter, waste, storage,
-              cleaning tools, robot vacuums — produced a solution that no
-              individual feature could have reached on its own.
+              ventilation, cat accessibility, and owner aesthetics — produced a
+              solution that no individual feature could have reached on its own.
             </p>
           </div>
           <div class="reflection-card">
@@ -2979,9 +3806,7 @@
             <p>
               A physical prototype would validate the maze corridor dimensions
               against real cats — specifically whether the U-turn geometry
-              eliminates litter tracking with any litter type. I'd also explore
-              a larger variation with an integrated electric outlet to support
-              all automatic litter boxes.
+              eliminates litter tracking with any litter type.
             </p>
           </div>
         </div>
