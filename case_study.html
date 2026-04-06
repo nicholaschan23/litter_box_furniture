@@ -325,6 +325,7 @@
       .comp-table {
         width: 100%;
         border-collapse: collapse;
+        table-layout: fixed;
         font-size: 0.825rem;
         margin: 1.5rem 0;
       }
@@ -339,22 +340,51 @@
         background: var(--paper-warm);
         border: 1px solid var(--rule);
       }
+      .comp-table th.photo-col {
+        width: 80px;
+        text-align: center;
+      }
+      .comp-table th.feat-col {
+        width: 88px;
+        text-align: center;
+        line-height: 1.3;
+      }
+      .comp-table th.price-col {
+        width: 100px;
+        text-align: center;
+      }
       .comp-table td {
         padding: 0.75rem;
         border: 1px solid var(--rule);
-        vertical-align: top;
+        vertical-align: middle;
         color: var(--ink);
       }
-      .check {
-        color: var(--accent);
+      .comp-table td.check,
+      .comp-table td.cross {
+        text-align: center;
+        padding: 0.5rem 0.25rem;
+      }
+      .comp-table td.check span,
+      .comp-table td.cross span {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 28px;
+        height: 28px;
+        border-radius: 6px;
+        font-size: 14px;
         font-weight: 500;
       }
-      .cross {
-        color: #b04040;
-        font-weight: 500;
+      .comp-table td.check span {
+        background: #eaf3de;
+        color: #27500a;
+      }
+      .comp-table td.cross span {
+        background: #fcebeb;
+        color: #791f1f;
       }
       .this-design td {
-        background: var(--accent-light) !important;
+        background: var(--paper-warm) !important;
       }
       .this-design td:first-child {
         font-weight: 500;
@@ -773,14 +803,13 @@
         <table class="comp-table">
           <thead>
             <tr>
-              <th style="width: 80px">Photo</th>
-              <th>Product</th>
-              <th>Furniture aesthetic</th>
-              <th>Hides waste bin</th>
-              <th>Litter tracking control</th>
-              <th>Enclosed storage</th>
-              <th>Customisable</th>
-              <th>Price</th>
+              <th class="photo-col">Photo</th>
+              <th class="name-col">Product</th>
+              <th class="feat-col">Furniture aesthetic</th>
+              <th class="feat-col">Hides waste bin</th>
+              <th class="feat-col">Litter trapping</th>
+              <th class="feat-col">Enclosed storage</th>
+              <th class="price-col">Price</th>
             </tr>
           </thead>
           <tbody>
@@ -788,8 +817,8 @@
               <td
                 style="
                   padding: 0.5rem;
-                  vertical-align: middle;
                   text-align: center;
+                  vertical-align: middle;
                 "
               >
                 <img
@@ -799,17 +828,24 @@
                     height: 64px;
                     object-fit: cover;
                     border-radius: 4px;
+                    display: block;
                   "
                 />
               </td>
               <td>Tucker Murphy Pet</td>
-              <td class="check">✓</td>
-              <td class="cross">✗</td>
-              <td class="check">✓</td>
-              <td class="check">✓</td>
-              <td class="cross">✗</td>
-              <td style="color: var(--ink-muted); font-size: 0.8rem">
-                Budget<br /><span
+              <td class="check"><span>✓</span></td>
+              <td class="cross"><span>✗</span></td>
+              <td class="check"><span>✓</span></td>
+              <td class="check"><span>✓</span></td>
+
+              <td
+                style="
+                  color: var(--ink-muted);
+                  font-size: 0.8rem;
+                  min-width: 85px;
+                "
+              >
+                Mid<br /><span
                   style="color: var(--ink-faint); font-size: 0.75rem"
                   >$190</span
                 >
@@ -819,8 +855,8 @@
               <td
                 style="
                   padding: 0.5rem;
-                  vertical-align: middle;
                   text-align: center;
+                  vertical-align: middle;
                 "
               >
                 <img
@@ -830,16 +866,23 @@
                     height: 64px;
                     object-fit: cover;
                     border-radius: 4px;
+                    display: block;
                   "
                 />
               </td>
               <td>Halitaa</td>
-              <td class="check">✓</td>
-              <td class="cross">✗</td>
-              <td class="check">✓</td>
-              <td class="cross">✗</td>
-              <td class="cross">✗</td>
-              <td style="color: var(--ink-muted); font-size: 0.8rem">
+              <td class="check"><span>✓</span></td>
+              <td class="cross"><span>✗</span></td>
+              <td class="check"><span>✓</span></td>
+              <td class="cross"><span>✗</span></td>
+
+              <td
+                style="
+                  color: var(--ink-muted);
+                  font-size: 0.8rem;
+                  min-width: 85px;
+                "
+              >
                 Budget<br /><span
                   style="color: var(--ink-faint); font-size: 0.75rem"
                   >$110</span
@@ -850,8 +893,8 @@
               <td
                 style="
                   padding: 0.5rem;
-                  vertical-align: middle;
                   text-align: center;
+                  vertical-align: middle;
                 "
               >
                 <img
@@ -861,16 +904,23 @@
                     height: 64px;
                     object-fit: cover;
                     border-radius: 4px;
+                    display: block;
                   "
                 />
               </td>
               <td>Homhedy</td>
-              <td class="check">✓</td>
-              <td class="cross">✗</td>
-              <td class="cross">✗</td>
-              <td class="cross">✗</td>
-              <td class="cross">✗</td>
-              <td style="color: var(--ink-muted); font-size: 0.8rem">
+              <td class="check"><span>✓</span></td>
+              <td class="cross"><span>✗</span></td>
+              <td class="cross"><span>✗</span></td>
+              <td class="cross"><span>✗</span></td>
+
+              <td
+                style="
+                  color: var(--ink-muted);
+                  font-size: 0.8rem;
+                  min-width: 85px;
+                "
+              >
                 Budget<br /><span
                   style="color: var(--ink-faint); font-size: 0.75rem"
                   >$80</span
@@ -881,8 +931,8 @@
               <td
                 style="
                   padding: 0.5rem;
-                  vertical-align: middle;
                   text-align: center;
+                  vertical-align: middle;
                 "
               >
                 <img
@@ -892,19 +942,26 @@
                     height: 64px;
                     object-fit: cover;
                     border-radius: 4px;
+                    display: block;
                   "
                 />
               </td>
               <td>Hoobro</td>
-              <td class="cross">✗</td>
-              <td class="cross">✗</td>
-              <td class="check">✓</td>
-              <td class="cross">✗</td>
-              <td class="cross">✗</td>
-              <td style="color: var(--ink-muted); font-size: 0.8rem">
-                Mid<br /><span
+              <td class="cross"><span>✗</span></td>
+              <td class="cross"><span>✗</span></td>
+              <td class="check"><span>✓</span></td>
+              <td class="cross"><span>✗</span></td>
+
+              <td
+                style="
+                  color: var(--ink-muted);
+                  font-size: 0.8rem;
+                  min-width: 85px;
+                "
+              >
+                Budget<br /><span
                   style="color: var(--ink-faint); font-size: 0.75rem"
-                  >$117</span
+                  >$120</span
                 >
               </td>
             </tr>
@@ -912,8 +969,8 @@
               <td
                 style="
                   padding: 0.5rem;
-                  vertical-align: middle;
                   text-align: center;
+                  vertical-align: middle;
                 "
               >
                 <img
@@ -923,17 +980,24 @@
                     height: 64px;
                     object-fit: cover;
                     border-radius: 4px;
+                    display: block;
                   "
                 />
               </td>
               <td>Ebern Designs</td>
-              <td class="cross">✗</td>
-              <td class="cross">✗</td>
-              <td class="check">✓</td>
-              <td class="cross">✗</td>
-              <td class="cross">✗</td>
-              <td style="color: var(--ink-muted); font-size: 0.8rem">
-                Budget<br /><span
+              <td class="cross"><span>✗</span></td>
+              <td class="cross"><span>✗</span></td>
+              <td class="check"><span>✓</span></td>
+              <td class="cross"><span>✗</span></td>
+
+              <td
+                style="
+                  color: var(--ink-muted);
+                  font-size: 0.8rem;
+                  min-width: 85px;
+                "
+              >
+                Mid<br /><span
                   style="color: var(--ink-faint); font-size: 0.75rem"
                   >$250</span
                 >
@@ -943,8 +1007,8 @@
               <td
                 style="
                   padding: 0.5rem;
-                  vertical-align: middle;
                   text-align: center;
+                  vertical-align: middle;
                 "
               >
                 <img
@@ -954,16 +1018,23 @@
                     height: 64px;
                     object-fit: cover;
                     border-radius: 4px;
+                    display: block;
                   "
                 />
               </td>
               <td>Litter-Robot (automatic)</td>
-              <td class="cross">✗</td>
-              <td class="check">✓</td>
-              <td class="cross">✗</td>
-              <td class="cross">✗</td>
-              <td class="cross">✗</td>
-              <td style="color: var(--ink-muted); font-size: 0.8rem">
+              <td class="cross"><span>✗</span></td>
+              <td class="check"><span>✓</span></td>
+              <td class="cross"><span>✗</span></td>
+              <td class="cross"><span>✗</span></td>
+
+              <td
+                style="
+                  color: var(--ink-muted);
+                  font-size: 0.8rem;
+                  min-width: 85px;
+                "
+              >
                 Premium<br /><span
                   style="color: var(--ink-faint); font-size: 0.75rem"
                   >$600–900</span
@@ -974,8 +1045,8 @@
               <td
                 style="
                   padding: 0.5rem;
-                  vertical-align: middle;
                   text-align: center;
+                  vertical-align: middle;
                 "
               >
                 <img
@@ -985,66 +1056,58 @@
                     height: 64px;
                     object-fit: cover;
                     border-radius: 4px;
+                    display: block;
                   "
                 />
               </td>
               <td>Lifewit</td>
-              <td class="cross">✗</td>
-              <td class="cross">✗</td>
-              <td class="cross">✗</td>
-              <td class="cross">✗</td>
-              <td class="cross">✗</td>
-              <td style="color: var(--ink-muted); font-size: 0.8rem">
+              <td class="cross"><span>✗</span></td>
+              <td class="cross"><span>✗</span></td>
+              <td class="cross"><span>✗</span></td>
+              <td class="cross"><span>✗</span></td>
+
+              <td
+                style="
+                  color: var(--ink-muted);
+                  font-size: 0.8rem;
+                  min-width: 85px;
+                "
+              >
                 Budget<br /><span
                   style="color: var(--ink-faint); font-size: 0.75rem"
                   >$70</span
                 >
               </td>
             </tr>
-            <tr class="this-design">
-              <td
-                style="
-                  padding: 0.5rem;
-                  vertical-align: middle;
-                  text-align: center;
-                  background: var(--accent-light);
-                "
-              >
-                <div
+            <tr class="this-design" style="border-top: 2px solid var(--rule)">
+              <td style="padding: 0.5rem; text-align: center">
+                <img
+                  src="images/competitors/this_design.png"
                   style="
                     width: 64px;
                     height: 64px;
-                    background: #e8efe8;
+                    object-fit: cover;
                     border-radius: 4px;
-                    border: 1px solid #8aac8b;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    font-size: 0.65rem;
-                    color: #3d5a3e;
-                    text-align: center;
-                    line-height: 1.3;
                   "
-                >
-                  your<br />render
-                </div>
+                />
               </td>
               <td>This design</td>
-              <td class="check">✓</td>
-              <td class="check">✓</td>
-              <td class="check">✓</td>
-              <td class="check">✓</td>
-              <td class="check">✓</td>
+              <td class="check"><span>✓</span></td>
+              <td class="check"><span>✓</span></td>
+              <td class="check"><span>✓</span></td>
+              <td class="check"><span>✓</span></td>
+
               <td
                 style="
-                  color: var(--accent);
+                  color: var(--ink-muted);
                   font-size: 0.8rem;
                   font-weight: 500;
-                  background: var(--accent-light);
+                  background: var(--paper-warm);
+                  min-width: 85px;
                 "
               >
                 Mid<br /><span
-                  style="color: var(--accent-mid); font-size: 0.75rem"
+                  style="color: var(--ink-faint); font-size: 0.75rem"
                   >~$249–399</span
                 >
               </td>
@@ -1054,12 +1117,12 @@
         <p>
           Most products in this category are budget enclosures that solve
           exactly one thing: hiding the litter box. None address litter
-          tracking, waste storage, enclosed owner storage, or customisation. The
-          Litter-Robot is the only competitor that manages waste — but at
-          $600–900, it requires power, produces no usable storage, and has no
-          furniture aesthetic. Tucker Murphy Pet comes closest to a complete
-          solution, with a furniture look and some storage, but still leaves the
-          waste bin exposed and litter uncontrolled.
+          tracking, waste storage, or enclosed owner storage. The Litter-Robot
+          is the only competitor that manages waste — but at $600–900, it
+          requires power, produces no usable storage, and has no furniture
+          aesthetic. Tucker Murphy Pet comes closest to a complete solution,
+          with a furniture look and some storage, but still leaves the waste bin
+          exposed and litter uncontrolled.
         </p>
       </section>
 
