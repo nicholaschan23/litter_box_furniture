@@ -709,16 +709,21 @@
           <div class="problem-card">
             <div class="problem-icon">
               <svg
+                xmlns="http://www.w3.org/2000/svg"
                 width="16"
                 height="16"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
                 stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-search-x-icon lucide-search-x"
               >
-                <rect x="2" y="3" width="20" height="14" rx="2" />
-                <line x1="8" y1="21" x2="16" y2="21" />
-                <line x1="12" y1="17" x2="12" y2="21" />
+                <path d="m13.5 8.5-5 5" />
+                <path d="m8.5 8.5 5 5" />
+                <circle cx="11" cy="11" r="8" />
+                <path d="m21 21-4.3-4.3" />
               </svg>
             </div>
             <h4>It doesn't look like furniture</h4>
@@ -732,14 +737,20 @@
           <div class="problem-card">
             <div class="problem-icon">
               <svg
+                xmlns="http://www.w3.org/2000/svg"
                 width="16"
                 height="16"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
                 stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-trash-icon lucide-trash"
               >
-                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+                <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6" />
+                <path d="M3 6h18" />
+                <path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
               </svg>
             </div>
             <h4>Exposed waste storage</h4>
@@ -752,14 +763,23 @@
           <div class="problem-card">
             <div class="problem-icon">
               <svg
+                xmlns="http://www.w3.org/2000/svg"
                 width="16"
                 height="16"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
                 stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-paw-print-icon lucide-paw-print"
               >
-                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                <circle cx="11" cy="4" r="2" />
+                <circle cx="18" cy="8" r="2" />
+                <circle cx="20" cy="16" r="2" />
+                <path
+                  d="M9 10a5 5 0 0 1 5 5v3.5a3.5 3.5 0 0 1-6.84 1.045Q6.52 17.48 4.46 16.84A3.5 3.5 0 0 1 5.5 10Z"
+                />
               </svg>
             </div>
             <h4>Litter tracking</h4>
@@ -772,16 +792,22 @@
           <div class="problem-card">
             <div class="problem-icon">
               <svg
+                xmlns="http://www.w3.org/2000/svg"
                 width="16"
                 height="16"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
                 stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-grid2x2-x-icon lucide-grid-2x2-x"
               >
-                <circle cx="12" cy="12" r="10" />
-                <line x1="12" y1="8" x2="12" y2="12" />
-                <line x1="12" y1="16" x2="12.01" y2="16" />
+                <path
+                  d="M12 3v17a1 1 0 0 1-1 1H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v6a1 1 0 0 1-1 1H3"
+                />
+                <path d="m16 16 5 5" />
+                <path d="m16 21 5-5" />
               </svg>
             </div>
             <h4>Wasted real estate</h4>
@@ -1129,8 +1155,8 @@
           single straight corridor isn't enough. Some offer extra storage but
           it's rarely enclosed. The Litter-Robot handles waste automatically but
           costs $600–900, requires power, and reads as an appliance, not
-          furniture. Tucker Murphy Pet comes closest aesthetically, but leaves
-          the waste bin exposed and the exit path too short to prevent tracking.
+          furniture. Tucker Murphy Pet furniture comes closest, but leaves the
+          waste bin exposed and the exit path too short to prevent tracking.
         </p>
       </section>
 
@@ -1375,10 +1401,10 @@
           itself becomes a problem: wasted floor space, an obstacle to step
           over, another surface to clean. Owners consistently said they'd rather
           vacuum a contained corridor than chase litter across their home.
-          Almost every setup looks identical: litter box, some concealment, a
-          waste bin in the open, all sitting on a mat that only partially helps.
-          The problem is systemic — no product on the market fully conceals the
-          litter setup and passes as real furniture."
+          Secondly, almost every setup looks identical: litter box, some
+          concealment, a waste bin in the open, all sitting on a mat that only
+          partially helps. The problem is systemic — no product on the market
+          fully conceals the litter setup and passes as real furniture."
         </p>
       </section>
 
@@ -1400,11 +1426,6 @@
             <p class="persona-role">
               27–38 · Urban apartment, 600–900 sq ft · One or two cats ·
               $65K–$110K income
-            </p>
-            <p class="sample-notice">
-              <strong>Sample content</strong> Refine with your own research —
-              apartment size, income, shopping habits, how they discovered
-              existing solutions were lacking.
             </p>
             <p class="persona-need">
               "I want to keep my living space clean and intentional, but every
@@ -1438,150 +1459,131 @@
           ignores.
         </p>
 
+        <div class="diagram-frame" style="margin: 1.5rem 0 2.5rem">
+          <img
+            src="images/renders/render_3_no_cat.png"
+            style="width: 100%; display: block"
+          />
+          <p class="diagram-caption">
+            Concept render — interior visible with example litter box and waste
+            bin setup.
+          </p>
+        </div>
+
         <h3>Ideation &amp; early decisions</h3>
-        <p class="sample-notice">
-          <strong>Sample content</strong> Replace the diagram and process steps
-          below with your actual sketches, rough CAD screenshots, and the
-          specific alternatives you ruled out (straight tunnel, top-entry hatch,
-          etc.).
+        <p>
+          Three layout concepts were developed and evaluated against the seven
+          design constraints before committing to CAD.
         </p>
 
-        <!-- Concept comparison — three layout options -->
-        <div class="diagram-frame" style="padding: 2rem; margin: 1.5rem 0">
-          <div
-            style="
-              display: grid;
-              grid-template-columns: 1fr 1fr 1fr;
-              gap: 1.5rem;
-              margin-bottom: 1.5rem;
-            "
-          >
-            <!-- Option A -->
-            <div class="diagram-frame" style="margin: 0">
-              <p
+        <!-- Option cards — images only, labels as eyebrows, prose below -->
+        <div
+          style="
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 1rem;
+            margin: 1.5rem 0 0.75rem;
+          "
+        >
+          <div class="diagram-frame" style="margin: 0">
+            <img
+              src="images/ideation/option_a.png"
+              style="width: 100%; display: block"
+            />
+            <p class="diagram-caption">
+              <span
                 style="
-                  font-size: 0.75rem;
-                  font-family: var(--sans);
-                  letter-spacing: 0.1em;
+                  display: block;
+                  color: var(--ink-faint);
                   text-transform: uppercase;
-                  color: var(--ink-muted);
-                  margin-bottom: 0.75rem;
+                  letter-spacing: 0.08em;
+                  font-size: 0.7rem;
                   font-weight: 500;
+                  margin-bottom: 0.2rem;
                 "
+                >Option A — Rejected</span
               >
-                Option A — Rejected
-              </p>
-              <img
-                src="images/ideation/option_a.png"
-                style="width: 100%; display: block; border-radius: 4px"
-              />
-              <p
-                style="
-                  font-size: 0.8rem;
-                  color: #b04040;
-                  text-align: center;
-                  margin-top: 0.75rem;
-                  line-height: 1.5;
-                "
-              >
-                1 large drawer at the top. Waste bin drawer on the left. Drawer
-                on the bottom to slide out the litter box for cleaning. Front
-                entry. Rejected because the door face setup was awkward and the
-                catwalk is not well supported. Realize the waste bin does not
-                need its own separate compartment.
-              </p>
-            </div>
-
-            <!-- Option B -->
-            <div class="diagram-frame" style="margin: 0">
-              <p
-                style="
-                  font-size: 0.75rem;
-                  font-family: var(--sans);
-                  letter-spacing: 0.1em;
-                  text-transform: uppercase;
-                  color: var(--ink-muted);
-                  margin-bottom: 0.75rem;
-                  font-weight: 500;
-                "
-              >
-                Option B — Rejected
-              </p>
-              <img
-                src="images/ideation/option_b.png"
-                style="width: 100%; display: block; border-radius: 4px"
-              />
-              <p
-                style="
-                  font-size: 0.8rem;
-                  color: #b04040;
-                  text-align: center;
-                  margin-top: 0.75rem;
-                  line-height: 1.5;
-                "
-              >
-                Wanted to see if a smaller footprint without a litter waste bin
-                compartment. Explored an option of having a catwalk in the back
-                that sits over the litter box to capture more litter. Rejected
-                because the catwalk blocked the litter box too much and raising
-                it created such a steep height difference which may be too
-                discouraging for a cat and to propel to that height to get out
-                can create a mess kicking litter on the jump. I also think
-                there's too much wasted space for the height of the front
-                entryway, even putting a skinny shelf their has low usability.
-              </p>
-            </div>
-
-            <!-- Option C -->
-            <div class="diagram-frame" style="margin: 0">
-              <p
-                style="
-                  font-size: 0.75rem;
-                  font-family: var(--sans);
-                  letter-spacing: 0.1em;
-                  text-transform: uppercase;
-                  color: #3d5a3e;
-                  margin-bottom: 0.75rem;
-                  font-weight: 500;
-                "
-              >
-                Option C — Chosen
-              </p>
-              <img
-                src="images/ideation/option_c.png"
-                alt="U-shaped maze — 3 forced turns, litter deposited before exit"
-                style="width: 100%; display: block; border-radius: 4px"
-              />
-              <p
-                style="
-                  font-size: 0.8rem;
-                  color: #3d5a3e;
-                  text-align: center;
-                  margin-top: 0.75rem;
-                  line-height: 1.5;
-                "
-              >
-                I decided to expand the footprint to include a maze with 3
-                forced turns to guarantee all litter is deposited before exit. I
-                used the extra spaces to create 4 storage sections. Even though
-                this is the largest design, it has no wasted space /
-                functionality in every corner / utilized space well, and meets
-                all criteria.
-              </p>
-            </div>
+              Waste bin compartment and slide-out litter box.
+            </p>
           </div>
-
-          <!-- Concluding text -->
-          <p
-            style="
-              font-size: 0.85rem;
-              color: var(--ink-muted);
-              text-align: center;
-              margin: 0;
-              line-height: 1.6;
-            "
+          <div class="diagram-frame" style="margin: 0">
+            <img
+              src="images/ideation/option_b.png"
+              style="width: 100%; display: block"
+            />
+            <p class="diagram-caption">
+              <span
+                style="
+                  display: block;
+                  color: var(--ink-faint);
+                  text-transform: uppercase;
+                  letter-spacing: 0.08em;
+                  font-size: 0.7rem;
+                  font-weight: 500;
+                  margin-bottom: 0.2rem;
+                "
+                >Option B — Rejected</span
+              >
+              Smaller footprint with raised rear catwalk over litter box.
+            </p>
+          </div>
+          <div
+            class="diagram-frame"
+            style="margin: 0; border-color: var(--accent-mid)"
           >
-            [Placeholder: Concluding sentence about why Option C was chosen]
+            <img
+              src="images/ideation/option_c.png"
+              alt="Option C — U-shaped maze corridor"
+              style="width: 100%; display: block"
+            />
+            <p class="diagram-caption" style="background: var(--accent-light)">
+              <span
+                style="
+                  display: block;
+                  color: var(--accent);
+                  text-transform: uppercase;
+                  letter-spacing: 0.08em;
+                  font-size: 0.7rem;
+                  font-weight: 500;
+                  margin-bottom: 0.2rem;
+                "
+                >Option C — Chosen</span
+              >
+              Expanded footprint with U-shaped maze and four storage sections.
+            </p>
+          </div>
+        </div>
+
+        <p>
+          <strong>Option A</strong> explored a front cat entry and a slide-out
+          litter box tray at the base. This design was rejected because the door
+          arrangement was structurally awkward, the walkway lacked support, and
+          decided that a dedicated waste bin compartment added unnecessary
+          complexity.
+        </p>
+        <p>
+          <strong>Option B</strong> targeted a smaller footprint by eliminating
+          the waste bin compartment and adding a raised catwalk over the litter
+          box to capture litter passively. This design was rejected because the
+          catwalk blocked litter box access, otherwise you'd have to raise the
+          catwalk and introduce a steep drop height on exit enough to cause cats
+          to kick litter on the jump, and the entry zone left significant
+          unusable dead space even with a shelf added.
+        </p>
+        <p>
+          <strong>Option C</strong> expands the footprint deliberately: a
+          U-shaped maze creates three forced direction changes before exit,
+          depositing litter inside the enclosure rather than outside. The
+          additional volume is distributed across four storage sections with no
+          wasted space. It is the largest of the three concepts — and the only
+          one that satisfies every constraint without compromise.
+        </p>
+
+        <div class="insight" style="margin-top: 1rem">
+          <p>
+            The trade-off is footprint. The U-shape adds width. But the calculus
+            is clear: it is far preferable to vacuum a contained corridor than
+            to chase litter all over your living space.
           </p>
         </div>
 
@@ -1624,11 +1626,6 @@
                 out on exit. The U-shape forces three direction changes and
                 maximises steps taken inside.
               </p>
-              <p class="sample-notice">
-                <strong>Sample content</strong> Add any additional alternatives
-                you tested — angled baffles, two-room designs — and your
-                specific reasoning for ruling each one out.
-              </p>
             </div>
           </div>
           <div class="process-step">
@@ -1642,11 +1639,6 @@
                 verified against the feline ergonomics table before finalising
                 dimensions.
               </p>
-              <p class="sample-notice">
-                <strong>Sample content</strong> Replace with your actual CAD
-                decisions — joinery method, flat-pack vs. pre-assembled,
-                specific tolerance challenges, material thickness assumptions.
-              </p>
             </div>
           </div>
         </div>
@@ -1657,13 +1649,6 @@
           component is a discrete panel or sub-assembly that maps to a logical
           build sequence.
         </p>
-        <p class="sample-notice">
-          <strong>Sample content</strong> Replace the three diagrams below with
-          your actual Onshape exploded view exports. Aim for: (1) full assembly
-          overview with all panels labelled, (2) maze corridor isolated, (3)
-          waste bin compartment detail.
-        </p>
-
         <!-- Exploded assembly diagram -->
         <div class="diagram-frame">
           <img
@@ -1671,47 +1656,8 @@
             style="width: 100%; display: block"
           />
           <p class="diagram-caption">
-            Exploded assembly overview — sample diagram. Replace with your
-            Onshape exports and actual panel dimensions.
+            Exploded view of furniture showing how every piece fits together.
           </p>
-        </div>
-
-        <div class="two-col-img">
-          <!-- Drawer assembly 1 -->
-          <div class="diagram-frame" style="margin: 0">
-            <img
-              src="images/cad/drawer_assembly_1.png"
-              style="width: 100%; display: block"
-            />
-            <p class="diagram-caption">Drawer assembly 1.</p>
-          </div>
-          <!-- Drawer assembly 2 -->
-          <div class="diagram-frame" style="margin: 0">
-            <img
-              src="images/cad/drawer_assembly_2.png"
-              style="width: 100%; display: block"
-            />
-            <p class="diagram-caption">Drawer assembly 2.</p>
-          </div>
-        </div>
-
-        <div class="two-col-img">
-          <!-- All open view 1 -->
-          <div class="diagram-frame" style="margin: 0">
-            <img
-              src="images/cad/all_open_view_1.png"
-              style="width: 100%; display: block"
-            />
-            <p class="diagram-caption">All drawers and doors open.</p>
-          </div>
-          <!-- All open view 2 -->
-          <div class="diagram-frame" style="margin: 0">
-            <img
-              src="images/cad/all_open_view_2.png"
-              style="width: 100%; display: block"
-            />
-            <p class="diagram-caption">All drawers and doors open.</p>
-          </div>
         </div>
 
         <div class="diagram-frame">
@@ -1719,41 +1665,26 @@
             src="images/cad/cad_drawing.jpg"
             style="width: 100%; display: block"
           />
-          <p class="diagram-caption">
-            Exploded assembly overview — sample diagram. Replace with your
-            Onshape exports and actual panel dimensions.
-          </p>
+          <p class="diagram-caption">Dimensioned CAD drawing.</p>
         </div>
 
-        <p class="sample-notice">
-          <strong>Fill in</strong> Replace this paragraph with your actual
-          material choices, panel thickness, and joinery method from your
-          Onshape model.
-        </p>
         <p>
-          The enclosure is designed around ¾″ (19mm) furniture-grade plywood
-          with an oak veneer face — the same material and finish language as
-          IKEA's upper-tier cabinet lines. Panels join via cam-lock hardware for
-          flat-pack assembly. Maze corridor walls are ½″ MDF for weight
-          reduction. All interior surfaces use a low-VOC paint for easy
-          wipe-down cleaning.
+          The enclosure is designed around 18mm, 20mm, and 36mm furniture-grade
+          MDF panels — the same material and finish language as IKEA's shelf
+          lines. Panels join via cam-lock hardware for flat-pack assembly. I
+          took lots of inspiration from IKEA's design language and resonate with
+          IKEA's goal and modular design language by offering well-designed,
+          functional, sustainable, and affordable home furnishings through
+          democratic design, ensuring products are affordable to as many people
+          as possible.
         </p>
 
         <h3>Bill of materials</h3>
         <p>
           Every component in the design — panels, fasteners, cam-locks, hinges,
-          drawer slides, legs, and ventilation inserts — is fully specified in
-          the Onshape model. Each part is parametric, meaning a change to a
-          panel thickness or leg height propagates through the entire assembly
-          automatically. The BOM below is a placeholder structure; export yours
-          directly from Onshape and drop it in.
-        </p>
-
-        <p class="sample-notice">
-          <strong>Fill in</strong> Export your BOM from Onshape (File → Export →
-          BOM) and replace the table below with your actual part list. This
-          section is one of the strongest signals of manufacturing readiness in
-          the entire case study — don't skip it.
+          drawer slides, legs, and screws — is fully specified in the Onshape
+          model. Each part is parametric, meaning a change to a panel thickness
+          or leg height propagates through the entire assembly automatically.
         </p>
 
         <div class="bom-table-wrap">
@@ -1792,70 +1723,70 @@
               <tr>
                 <td>4</td>
                 <td>Column 1</td>
-                <td>18mm MDF</td>
+                <td>18mm particle board</td>
                 <td>1</td>
                 <td>—</td>
               </tr>
               <tr>
                 <td>5</td>
                 <td>Column 2</td>
-                <td>36mm MDF</td>
+                <td>36mm particle board</td>
                 <td>1</td>
                 <td>—</td>
               </tr>
               <tr>
                 <td>6</td>
                 <td>Column 3</td>
-                <td>36mm MDF</td>
+                <td>36mm particle board</td>
                 <td>1</td>
                 <td>—</td>
               </tr>
               <tr>
                 <td>7</td>
                 <td>Column 4</td>
-                <td>18mm MDF</td>
+                <td>18mm particle board</td>
                 <td>1</td>
                 <td>—</td>
               </tr>
               <tr>
                 <td>8</td>
                 <td>Column 5</td>
-                <td>18mm MDF</td>
+                <td>18mm particle board</td>
                 <td>1</td>
                 <td>—</td>
               </tr>
               <tr>
                 <td>9</td>
                 <td>Top panel</td>
-                <td>36mm MDF</td>
+                <td>36mm particle board</td>
                 <td>1</td>
                 <td>—</td>
               </tr>
               <tr>
                 <td>10</td>
                 <td>Bottom shelf small</td>
-                <td>20mm MDF</td>
+                <td>20mm particle board</td>
                 <td>1</td>
                 <td>—</td>
               </tr>
               <tr>
                 <td>11</td>
                 <td>Top shelf large</td>
-                <td>20mm MDF</td>
+                <td>20mm particle board</td>
                 <td>1</td>
                 <td>—</td>
               </tr>
               <tr>
                 <td>12</td>
                 <td>Top shelf small</td>
-                <td>20mm MDF</td>
+                <td>20mm particle board</td>
                 <td>1</td>
                 <td>—</td>
               </tr>
               <tr>
                 <td>13</td>
                 <td>Tabletop</td>
-                <td>20mm MDF</td>
+                <td>20mm particle board</td>
                 <td>1</td>
                 <td>Swappable for different colors and styles</td>
               </tr>
@@ -1864,84 +1795,84 @@
                 <td>Drawer runner right</td>
                 <td>Steel, full-extension</td>
                 <td>3</td>
-                <td>—</td>
+                <td>Blum 563H4570B</td>
               </tr>
               <tr>
                 <td>15</td>
                 <td>Drawer runner left</td>
                 <td>Steel, full-extension</td>
                 <td>3</td>
-                <td>—</td>
+                <td>Blum 563H4570B</td>
               </tr>
               <tr>
                 <td>16</td>
                 <td>Drawer face</td>
-                <td>18mm MDF</td>
+                <td>18mm particle board</td>
                 <td>3</td>
-                <td>Swappable for different colors and styles</td>
+                <td>—</td>
               </tr>
               <tr>
                 <td>17</td>
                 <td>Drawer back wall</td>
-                <td>18mm MDF</td>
+                <td>18mm particle board</td>
                 <td>3</td>
                 <td>—</td>
               </tr>
               <tr>
                 <td>18</td>
                 <td>Drawer support bar</td>
-                <td>16mm plywood</td>
+                <td>16mm particle board</td>
                 <td>3</td>
                 <td>—</td>
               </tr>
               <tr>
                 <td>19</td>
                 <td>Drawer base</td>
-                <td>3mm HDF</td>
+                <td>3mm particle board</td>
                 <td>3</td>
                 <td>—</td>
               </tr>
               <tr>
                 <td>20</td>
                 <td>Drawer side wall</td>
-                <td>18mm MDF</td>
+                <td>18mm particle board</td>
                 <td>6</td>
                 <td>—</td>
               </tr>
               <tr>
                 <td>21</td>
                 <td>Drawer locking device, right</td>
-                <td>Plastic, T51.1901.PS</td>
+                <td>Plastic</td>
                 <td>3</td>
-                <td>—</td>
+                <td>Blum T51.1901.PS</td>
               </tr>
               <tr>
                 <td>22</td>
                 <td>Drawer locking device, left</td>
-                <td>Plastic, T51.1901.PS</td>
+                <td>Plastic</td>
                 <td>3</td>
-                <td>—</td>
+                <td>Blum T51.1901.PS</td>
               </tr>
               <tr>
                 <td>23</td>
                 <td>Door</td>
                 <td>18mm MDF</td>
                 <td>3</td>
-                <td>Swappable for different colors and styles</td>
+                <td>—</td>
               </tr>
               <tr>
                 <td>24</td>
                 <td>Door Hinge</td>
                 <td>35mm cup hinge, soft-close</td>
                 <td>6</td>
-                <td>—</td>
+                <td>Blum 71B3550</td>
               </tr>
               <tr>
                 <td>25</td>
                 <td>Leg</td>
                 <td>Solid wood</td>
                 <td>6</td>
-                <td>Swappable for different heights and colors</td>
+                <td>IKEA STUBBARP</td>
               </tr>
               <tr>
                 <td>26</td>
@@ -1980,23 +1911,23 @@
               </tr>
               <tr>
                 <td>31</td>
+                <td>Flat Head Screws for Particleboard</td>
+                <td>Black-Oxide Steel, #6 Size, 1-1/8"</td>
+                <td>12</td>
+                <td>—</td>
+              </tr>
+              <tr>
+                <td>32</td>
                 <td>Rounded Head Screws for Plywood</td>
                 <td>Zinc-Plated Steel, #6 Size, 1/2"</td>
                 <td>42</td>
                 <td>—</td>
               </tr>
               <tr>
-                <td>32</td>
+                <td>33</td>
                 <td>Tapping Inserts for Softwood Flanged</td>
                 <td>Zinc Alloy M8 × 1.25mm Thread, 20mm Installed Length</td>
                 <td>6</td>
-                <td>—</td>
-              </tr>
-              <tr>
-                <td>33</td>
-                <td>Flat Head Screws for Particleboard</td>
-                <td>Black-Oxide Steel, #6 Size, 1-1/8"</td>
-                <td>12</td>
                 <td>—</td>
               </tr>
             </tbody>
@@ -2011,10 +1942,13 @@
               <h3>U-shaped maze corridor</h3>
               <p>
                 The single most effective change was rethinking the entry path.
-                A U-shaped internal maze creates three direction changes,
-                dramatically increasing the number of steps taken inside before
-                a cat exits. More steps inside means more litter deposited on
-                the interior floor before it ever reaches the outside world.
+                By replacing the traditional straight exit with a U-shaped
+                internal maze, introducing three distinct direction changes,
+                effectively eliminates the 'straight-shot' exit that fuels
+                tracking. Integrated short tactile 'lips' at every turn force a
+                natural shift in gait, ensuring litter is deposited deep within
+                the enclosure’s interior long before the cat reaches your
+                floors.
               </p>
               <p>
                 The trade-off is footprint. The U-shape adds width. But the
@@ -2023,7 +1957,6 @@
               </p>
             </div>
           </div>
-          <!-- SVG: Litter comparison graphic -->
           <div class="diagram-frame" style="margin: 0; align-self: center">
             <img
               src="images/cad/maze_corridor_top_view.png"
@@ -2035,101 +1968,61 @@
           </div>
         </div>
 
+        <!--  -->
         <div class="feature-row">
-          <!-- SVG: Interior layout front view -->
           <div class="diagram-frame" style="margin: 0; align-self: center">
             <img
-              src="images/interior_layout_front_section_view_repla.png"
-              alt="Interior layout — front section view. Replace with CAD export."
+              src="images/cad/litter_box_waste_bin_setup.png"
               style="width: 100%; display: block"
             />
             <p class="diagram-caption">
-              Interior layout — front section view. Replace with CAD export.
+              Sample layout of litter box and waste bin setup.
             </p>
           </div>
           <div>
             <div class="feature-number">02</div>
             <div class="feature-text">
-              <h3>Dedicated waste bin compartment</h3>
+              <h3>Waste bin area accomodation</h3>
               <p>
-                A separate interior compartment houses the litter waste bin — a
+                Area for the litter waste bin is accounted for in the design — a
                 Litter Genie, Litter Zero, or equivalent. This is the detail
                 every competing product omits entirely. No enclosure on the
-                market includes a solution for the waste container. Here, it is
-                designed in from the start: enclosed, accessible from a discrete
-                panel, and out of sight.
+                market includes an area designated for the litter waste bin. It
+                is enclosed, accessible next to the litter box, and hidden
+                behind a door to maintain the furniture aesthetic.
               </p>
             </div>
           </div>
         </div>
 
+        <!-- Storage -->
         <div class="feature-row">
           <div>
             <div class="feature-number">03</div>
             <div class="feature-text">
-              <h3>Usable top surface</h3>
+              <h3>Storage</h3>
               <p>
-                The top of the enclosure is flat, clean, and load-bearing —
-                designed for plants, books, a lamp, or any decorative items that
-                make a surface feel intentional rather than incidental. An
-                optional wire management cutout accommodates a lamp or charging
-                cable without surface clutter. Doors use a push-to-open latch
-                mechanism, keeping the front face completely hardware-free and
-                flush with the furniture aesthetic — no handles, no visible
-                hinges. The enclosure earns its floor space by functioning as
-                furniture in both directions.
+                Not a single volume of the furniture is wasted. There are a
+                total of 4 enclosed storage areas: 3 drawers at the top, and 1
+                shelf above the maze. Each section can easily fit 60 small puck
+                cat wet food cans - that's a total storage volume equivalent to
+                over 240 cans of food.
               </p>
             </div>
           </div>
-          <!-- SVG: Top surface isometric -->
           <div class="diagram-frame" style="margin: 0; align-self: center">
             <img
-              src="images/top_surface_with_optional_wire_cutout_an.png"
-              alt="Top surface with optional wire cutout and decorative styling."
+              src="images/cad/storage_volume.png"
               style="width: 100%; display: block"
             />
             <p class="diagram-caption">
-              Top surface with optional wire cutout and decorative styling.
+              60 small puck cat wet food cans in a drawer with plenty of spare
+              room.
             </p>
           </div>
         </div>
 
-        <div class="feature-row">
-          <!-- SVG: Modular leg variants -->
-          <div class="diagram-frame" style="margin: 0; align-self: center">
-            <img
-              src="images/swappable_leg_variants_the_same_cabinet.png"
-              alt="Swappable leg variants — the same cabinet base accepts any leg height. Replace with CAD render."
-              style="width: 100%; display: block"
-            />
-            <p class="diagram-caption">
-              Swappable leg variants — the same cabinet base accepts any leg
-              height. Replace with CAD render.
-            </p>
-          </div>
-          <div>
-            <div class="feature-number">04</div>
-            <div class="feature-text">
-              <h3>Modular legs</h3>
-              <p>
-                The enclosure sits on swappable legs rather than a fixed base.
-                This serves two independent purposes. First, it lets owners
-                match the leg height to the aesthetic of their space — shorter
-                legs for a low-profile Scandinavian look, taller legs for a
-                mid-century silhouette. Second, and more practically, shorter
-                legs lower the step-up height for senior or mobility-limited
-                cats who may struggle to enter a raised enclosure, removing a
-                barrier to consistent litter box use without changing anything
-                else about the design.
-              </p>
-              <p>
-                Robot vacuum clearance is a welcome side-effect of the standard
-                leg height — but it is not the reason for this design decision.
-              </p>
-            </div>
-          </div>
-        </div>
-
+        <!-- Ventilation -->
         <div class="feature-row">
           <div class="diagram-frame" style="margin: 0; align-self: center">
             <img
@@ -2137,75 +2030,148 @@
               style="width: 100%; display: block"
             />
             <p class="diagram-caption">
-              Structural package design - this shows how the contents of the
-              furniture will fit in a box to be shipped. The main box will have
-              all essential panels while the drawer faces, doors, legs, and
-              tabletop will be separate for buyers to customize their furniture.
+              Front view — vertical ventilation holes runs along the top of the
+              back panel.
             </p>
           </div>
           <div>
-            <div class="feature-number">05</div>
+            <div class="feature-number">04</div>
             <div class="feature-text">
               <h3>Passive ventilation</h3>
               <p>
                 An enclosed litter space traps ammonia — the primary odour
                 compound in cat waste. Left unaddressed, buildup discourages
                 cats from using the box. The enclosure uses a passive
-                ventilation path: a concealed gap along the top of the back
-                panel draws air upward through a user-replaceable activated
-                charcoal filter insert. There are no visible grilles, no powered
-                fans, and no aesthetic compromise.
-              </p>
-              <p>
-                The filter is accessible from the rear without tools and
-                replaceable on the same schedule as a standard charcoal filter —
-                roughly every 4–6 weeks.
+                ventilation path: a row of ventilation holes along the top of
+                the back panel. There are holes on the column walls at the
+                height of the ventialtion holes to mount accessory trays for
+                Zeolite bags or chemical free lump charcoal to absorb ammonia
+                and odors. The grills are hidden behind the furniture for no
+                aesthetic compromise.
               </p>
             </div>
           </div>
         </div>
 
+        <!-- Modern minimal design -->
+        <div class="feature-row">
+          <div>
+            <div class="feature-number">05</div>
+            <div class="feature-text">
+              <h3>Modern minimal design</h3>
+              <p>
+                The drawers and doors use push-to-open latches to keep the front
+                face to create a flush, handle-free look. Modern furniture
+                design great for Japandi and Scandinavian aesthetics. The design
+                is intentionally minimal and hardware-free to blend into a
+                variety of interior styles without looking like a cat product.
+                The only visible difference at a glance is a cutout on the side
+                of the furniture. Otherwise, from the front, it looks nothing
+                like cat furniture.
+              </p>
+            </div>
+          </div>
+          <div class="diagram-frame" style="margin: 0; align-self: center">
+            <img
+              src="images/cad/isometric_view_with_doors.png"
+              style="width: 100%; display: block"
+            />
+            <p class="diagram-caption">
+              Isometric view with drawer and door panels.
+            </p>
+          </div>
+        </div>
+
+        <!-- Legs -->
+        <div class="feature-row">
+          <div class="diagram-frame" style="margin: 0; align-self: center">
+            <img
+              src="images/cad/all_open_view_3.png"
+              style="width: 100%; display: block"
+            />
+            <p class="diagram-caption">All compartments open.</p>
+          </div>
+          <div>
+            <div class="feature-number">06</div>
+            <div class="feature-text">
+              <h3>Modular legs</h3>
+              <p>
+                The enclosure sits on swappable legs rather than a fixed base
+                that can serve three purposes. You can swap the legs for
+                different heights, style, and lengths to match aesthetics of
+                your space. Second, and more practically, shorter legs lower the
+                step-up height for senior or mobility-limited cats who may
+                struggle to enter a raised enclosure, removing a barrier to
+                consistent litter box use without changing anything else about
+                the design.
+              </p>
+              <p>
+                You can even swap for slightly taller legs for better ground
+                clearance to clean below the furniture or house a robot vacuum
+                charging station.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Usable top surface -->
+        <div class="feature-row">
+          <div>
+            <div class="feature-number">07</div>
+            <div class="feature-text">
+              <h3>Usable top surface</h3>
+              <p>
+                The top of the enclosure is flat, clean, and load-bearing —
+                designed for plants, books, a lamp, or any decorative items that
+                make a surface feel intentional rather than incidental. The
+                enclosure earns its floor space by functioning as furniture in
+                both directions. You could even leave out the tabletop entirely
+                to save on cost.
+              </p>
+            </div>
+          </div>
+          <div class="diagram-frame" style="margin: 0; align-self: center">
+            <img
+              src="images/cad/isometric_view.png"
+              style="width: 100%; display: block"
+            />
+            <p class="diagram-caption">
+              Swappable tabletop to customize the look and feel.
+            </p>
+          </div>
+        </div>
+
+        <!-- Packaging -->
         <div class="feature-row">
           <div class="diagram-frame" style="margin: 0; align-self: center">
             <img
               src="images/cad/structural_package_design.png"
               style="width: 100%; display: block"
             />
-            <p class="diagram-caption">
-              Structural package design - this shows how the contents of the
-              furniture will fit in a box to be shipped. The main box will have
-              all essential panels while the drawer faces, doors, legs, and
-              tabletop will be separate for buyers to customize their furniture.
-            </p>
+            <p class="diagram-caption">Flat-pack configurations.</p>
           </div>
           <div>
-            <div class="feature-number">06</div>
+            <div class="feature-number">08</div>
             <div class="feature-text">
-              <h3>Package design and modularity</h3>
+              <h3>Flat-pack and modular assembly</h3>
               <p>
-                An enclosed litter space traps ammonia — the primary odour
-                compound in cat waste. Left unaddressed, buildup discourages
-                cats from using the box. The enclosure uses a passive
-                ventilation path: a concealed gap along the top of the back
-                panel draws air upward through a user-replaceable activated
-                charcoal filter insert. There are no visible grilles, no powered
-                fans, and no aesthetic compromise. 182mm x 1362mm x 500mm
+                The enclosure ships in a single flat-pack box. Structural panels
+                — the cabinet body, shelves, and internal maze walls — are in
+                the main carton. Door faces, drawer fronts, the tabletop, and
+                legs ship separately, letting buyers choose their own finish
+                combination before assembly.
               </p>
               <p>
-                The filter is accessible from the rear without tools and
-                replaceable on the same schedule as a standard charcoal filter —
-                roughly every 4–6 weeks.
+                This mirrors IKEA's model: the core structure is fixed, but
+                every visible surface is swappable. A buyer can start with a
+                white oak top and natural legs, and update the door faces two
+                years later without replacing the whole piece.
               </p>
             </div>
           </div>
         </div>
 
         <h3>Design specifications</h3>
-        <p class="sample-notice">
-          <strong>Fill in</strong> Replace the footprint, panel material, and
-          assembly method rows with your actual Onshape dimensions and confirmed
-          material spec.
-        </p>
         <table class="spec-table">
           <thead>
             <tr>
@@ -2216,59 +2182,44 @@
           <tbody>
             <tr>
               <td>Approximate footprint</td>
-              <td>
-                60″ W × 18″ D × 32″ H &nbsp;<em
-                  style="font-weight: 300; color: #b0afa6"
-                  >(sample — replace with Onshape dimensions)</em
-                >
-              </td>
+              <td>126cm × 52cm × 80cm &nbsp;</td>
             </tr>
             <tr>
               <td>Interior litter headspace</td>
-              <td>15″ minimum</td>
+              <td>45cm</td>
             </tr>
             <tr>
-              <td>Corridor entry height</td>
-              <td>10″ (cat), step-over 4″</td>
+              <td>Maze height</td>
+              <td>29cm</td>
+            </tr>
+            <tr>
+              <td>Entrance height</td>
+              <td>10cm (without legs)</td>
             </tr>
             <tr>
               <td>Ventilation</td>
-              <td>
-                Passive — concealed back-panel gap with user-replaceable
-                activated charcoal filter
-              </td>
+              <td>Passive — concealed back-panel vents</td>
             </tr>
             <tr>
               <td>Leg height</td>
               <td>
-                Modular — short (2.5″), standard (4.5″), tall (7″) variants
-              </td>
-            </tr>
-            <tr>
-              <td>Panel material</td>
-              <td>
-                ¾″ furniture-grade plywood, oak veneer face &nbsp;<em
-                  style="font-weight: 300; color: #b0afa6"
-                  >(sample — confirm)</em
-                >
+                Modular — short (5cm), standard (10cm), tall (15cm) variants
               </td>
             </tr>
             <tr>
               <td>Assembly method</td>
-              <td>
-                Flat-pack, cam-lock hardware &nbsp;<em
-                  style="font-weight: 300; color: #b0afa6"
-                  >(sample — confirm)</em
-                >
-              </td>
+              <td>Flat-pack, cam-lock hardware</td>
             </tr>
             <tr>
               <td>Litter box capacity</td>
-              <td>Standard and XL enclosed boxes</td>
+              <td>Accomodates 60cm x 40cm footprint with room for waste bin</td>
             </tr>
             <tr>
               <td>Waste bin compartment</td>
-              <td>Compatible with Litter Genie / Litter Zero</td>
+              <td>
+                Accomodates 27cm x 27cm footprint with room for large litter box
+                footprint
+              </td>
             </tr>
             <tr>
               <td>Modeled in</td>
@@ -2285,17 +2236,6 @@
             </tr>
           </tbody>
         </table>
-
-        <div class="diagram-frame">
-          <img
-            src="images/renders/render_3_no_cat.png"
-            style="width: 100%; display: block"
-          />
-          <p class="diagram-caption">
-            Concept render with litter box equipment in a sample living room
-            setting.
-          </p>
-        </div>
       </section>
 
       <!-- MARKET OPPORTUNITY -->
@@ -2395,7 +2335,7 @@
               like to explore designing a shorter and or front entry variant
               better for tight spaces, a multi-cat friendly variant, and taller
               cabin room for larger automatic litter robots, all without
-              compromising functionaliy and aesthetics.
+              compromising functionality and aesthetics.
             </p>
           </div>
         </div>
