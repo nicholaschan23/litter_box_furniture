@@ -89,11 +89,48 @@
         padding: 1rem 1.25rem;
         border-right: 1px solid var(--rule);
       }
-      .meta-item:first-child {
-        padding-left: 0;
-      }
       .meta-item:last-child {
         border-right: none;
+      }
+      @media (max-width: 740px) {
+        .meta-strip {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 0;
+        }
+        .meta-item {
+          flex: none;
+          width: 100%;
+          padding: 1rem 1.25rem;
+          border-right: 1px solid var(--rule);
+          border-bottom: 1px solid var(--rule);
+        }
+        .meta-item:nth-child(2n) {
+          border-right: none;
+        }
+        .meta-item:nth-child(n + 3) {
+          border-bottom: none;
+        }
+      }
+      @media (max-width: 580px) {
+        .meta-strip {
+          display: flex;
+          flex-direction: column;
+          grid-template-columns: none;
+        }
+        .meta-item {
+          flex: 1;
+          width: 100%;
+          padding: 1rem 1.25rem;
+          border-right: none;
+          border-bottom: 1px solid var(--rule);
+        }
+        .meta-item:nth-child(n) {
+          border-bottom: 1px solid var(--rule);
+        }
+        .meta-item:last-child {
+          border-bottom: none;
+        }
       }
       .meta-label {
         font-size: 10px;
@@ -248,7 +285,8 @@
           grid-template-columns: 1fr;
         }
       }
-      .bom-table-wrap {
+      .bom-table-wrap,
+      .comp-table-wrap {
         overflow-x: auto;
         margin: 1.5rem 0;
       }
@@ -333,6 +371,13 @@
         table-layout: fixed;
         font-size: 0.825rem;
         margin: 1.5rem 0;
+        min-width: 900px;
+      }
+      @media (max-width: 760px) {
+        .comp-table {
+          table-layout: auto;
+          min-width: 100%;
+        }
       }
       .comp-table th {
         text-align: left;
@@ -842,326 +887,328 @@
           hide the litter box, ignore everything else.
         </p>
 
-        <table class="comp-table">
-          <thead>
-            <tr>
-              <th class="photo-col">Photo</th>
-              <th class="name-col">Product</th>
-              <th class="feat-col">Furniture aesthetic</th>
-              <th class="feat-col">Hides waste bin</th>
-              <th class="feat-col">Litter trapping</th>
-              <th class="feat-col">Extra storage</th>
-              <th class="price-col">Price</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td
-                style="
-                  padding: 0.5rem;
-                  text-align: center;
-                  vertical-align: middle;
-                "
-              >
-                <img
-                  src="images/competitors/tucker_murphy_pet.jpg"
+        <div class="comp-table-wrap">
+          <table class="comp-table">
+            <thead>
+              <tr>
+                <th class="photo-col">Photo</th>
+                <th class="name-col">Product</th>
+                <th class="feat-col">Furniture aesthetic</th>
+                <th class="feat-col">Hides waste bin</th>
+                <th class="feat-col">Litter trapping</th>
+                <th class="feat-col">Extra storage</th>
+                <th class="price-col">Price</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td
                   style="
-                    width: 64px;
-                    height: 64px;
-                    object-fit: cover;
-                    border-radius: 4px;
-                    display: block;
+                    padding: 0.5rem;
+                    text-align: center;
+                    vertical-align: middle;
                   "
-                />
-              </td>
-              <td>Tucker Murphy Pet</td>
-              <td class="check"><span>✓</span></td>
-              <td class="cross"><span>✗</span></td>
-              <td class="check"><span>✓</span></td>
-              <td class="check"><span>✓</span></td>
-
-              <td
-                style="
-                  color: var(--ink-muted);
-                  font-size: 0.8rem;
-                  min-width: 85px;
-                "
-              >
-                Mid<br /><span
-                  style="color: var(--ink-faint); font-size: 0.75rem"
-                  >$190</span
                 >
-              </td>
-            </tr>
-            <tr>
-              <td
-                style="
-                  padding: 0.5rem;
-                  text-align: center;
-                  vertical-align: middle;
-                "
-              >
-                <img
-                  src="images/competitors/halitaa.jpg"
+                  <img
+                    src="images/competitors/tucker_murphy_pet.jpg"
+                    style="
+                      width: 64px;
+                      height: 64px;
+                      object-fit: cover;
+                      border-radius: 4px;
+                      display: block;
+                    "
+                  />
+                </td>
+                <td>Tucker Murphy Pet</td>
+                <td class="check"><span>✓</span></td>
+                <td class="cross"><span>✗</span></td>
+                <td class="check"><span>✓</span></td>
+                <td class="check"><span>✓</span></td>
+
+                <td
                   style="
-                    width: 64px;
-                    height: 64px;
-                    object-fit: cover;
-                    border-radius: 4px;
-                    display: block;
+                    color: var(--ink-muted);
+                    font-size: 0.8rem;
+                    min-width: 85px;
                   "
-                />
-              </td>
-              <td>Halitaa</td>
-              <td class="check"><span>✓</span></td>
-              <td class="cross"><span>✗</span></td>
-              <td class="check"><span>✓</span></td>
-              <td class="cross"><span>✗</span></td>
-
-              <td
-                style="
-                  color: var(--ink-muted);
-                  font-size: 0.8rem;
-                  min-width: 85px;
-                "
-              >
-                Budget<br /><span
-                  style="color: var(--ink-faint); font-size: 0.75rem"
-                  >$110</span
                 >
-              </td>
-            </tr>
-            <tr>
-              <td
-                style="
-                  padding: 0.5rem;
-                  text-align: center;
-                  vertical-align: middle;
-                "
-              >
-                <img
-                  src="images/competitors/homhedy.jpg"
+                  Mid<br /><span
+                    style="color: var(--ink-faint); font-size: 0.75rem"
+                    >$190</span
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td
                   style="
-                    width: 64px;
-                    height: 64px;
-                    object-fit: cover;
-                    border-radius: 4px;
-                    display: block;
+                    padding: 0.5rem;
+                    text-align: center;
+                    vertical-align: middle;
                   "
-                />
-              </td>
-              <td>Homhedy</td>
-              <td class="check"><span>✓</span></td>
-              <td class="cross"><span>✗</span></td>
-              <td class="cross"><span>✗</span></td>
-              <td class="cross"><span>✗</span></td>
-
-              <td
-                style="
-                  color: var(--ink-muted);
-                  font-size: 0.8rem;
-                  min-width: 85px;
-                "
-              >
-                Budget<br /><span
-                  style="color: var(--ink-faint); font-size: 0.75rem"
-                  >$80</span
                 >
-              </td>
-            </tr>
-            <tr>
-              <td
-                style="
-                  padding: 0.5rem;
-                  text-align: center;
-                  vertical-align: middle;
-                "
-              >
-                <img
-                  src="images/competitors/hoobro.jpg"
+                  <img
+                    src="images/competitors/halitaa.jpg"
+                    style="
+                      width: 64px;
+                      height: 64px;
+                      object-fit: cover;
+                      border-radius: 4px;
+                      display: block;
+                    "
+                  />
+                </td>
+                <td>Halitaa</td>
+                <td class="check"><span>✓</span></td>
+                <td class="cross"><span>✗</span></td>
+                <td class="check"><span>✓</span></td>
+                <td class="cross"><span>✗</span></td>
+
+                <td
                   style="
-                    width: 64px;
-                    height: 64px;
-                    object-fit: cover;
-                    border-radius: 4px;
-                    display: block;
+                    color: var(--ink-muted);
+                    font-size: 0.8rem;
+                    min-width: 85px;
                   "
-                />
-              </td>
-              <td>Hoobro</td>
-              <td class="cross"><span>✗</span></td>
-              <td class="cross"><span>✗</span></td>
-              <td class="check"><span>✓</span></td>
-              <td class="check"><span>✓</span></td>
-
-              <td
-                style="
-                  color: var(--ink-muted);
-                  font-size: 0.8rem;
-                  min-width: 85px;
-                "
-              >
-                Budget<br /><span
-                  style="color: var(--ink-faint); font-size: 0.75rem"
-                  >$115</span
                 >
-              </td>
-            </tr>
-            <tr>
-              <td
-                style="
-                  padding: 0.5rem;
-                  text-align: center;
-                  vertical-align: middle;
-                "
-              >
-                <img
-                  src="images/competitors/ebern_designs.jpg"
+                  Budget<br /><span
+                    style="color: var(--ink-faint); font-size: 0.75rem"
+                    >$110</span
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td
                   style="
-                    width: 64px;
-                    height: 64px;
-                    object-fit: cover;
-                    border-radius: 4px;
-                    display: block;
+                    padding: 0.5rem;
+                    text-align: center;
+                    vertical-align: middle;
                   "
-                />
-              </td>
-              <td>Ebern Designs</td>
-              <td class="cross"><span>✗</span></td>
-              <td class="cross"><span>✗</span></td>
-              <td class="check"><span>✓</span></td>
-              <td class="cross"><span>✗</span></td>
-
-              <td
-                style="
-                  color: var(--ink-muted);
-                  font-size: 0.8rem;
-                  min-width: 85px;
-                "
-              >
-                Mid<br /><span
-                  style="color: var(--ink-faint); font-size: 0.75rem"
-                  >$250</span
                 >
-              </td>
-            </tr>
-            <tr>
-              <td
-                style="
-                  padding: 0.5rem;
-                  text-align: center;
-                  vertical-align: middle;
-                "
-              >
-                <img
-                  src="images/competitors/litter_robot.jpg"
+                  <img
+                    src="images/competitors/homhedy.jpg"
+                    style="
+                      width: 64px;
+                      height: 64px;
+                      object-fit: cover;
+                      border-radius: 4px;
+                      display: block;
+                    "
+                  />
+                </td>
+                <td>Homhedy</td>
+                <td class="check"><span>✓</span></td>
+                <td class="cross"><span>✗</span></td>
+                <td class="cross"><span>✗</span></td>
+                <td class="cross"><span>✗</span></td>
+
+                <td
                   style="
-                    width: 64px;
-                    height: 64px;
-                    object-fit: cover;
-                    border-radius: 4px;
-                    display: block;
+                    color: var(--ink-muted);
+                    font-size: 0.8rem;
+                    min-width: 85px;
                   "
-                />
-              </td>
-              <td>Litter-Robot (automatic)</td>
-              <td class="cross"><span>✗</span></td>
-              <td class="check"><span>✓</span></td>
-              <td class="cross"><span>✗</span></td>
-              <td class="cross"><span>✗</span></td>
-
-              <td
-                style="
-                  color: var(--ink-muted);
-                  font-size: 0.8rem;
-                  min-width: 85px;
-                "
-              >
-                Premium<br /><span
-                  style="color: var(--ink-faint); font-size: 0.75rem"
-                  >$600–900</span
                 >
-              </td>
-            </tr>
-            <tr>
-              <td
-                style="
-                  padding: 0.5rem;
-                  text-align: center;
-                  vertical-align: middle;
-                "
-              >
-                <img
-                  src="images/competitors/lifewit.jpg"
+                  Budget<br /><span
+                    style="color: var(--ink-faint); font-size: 0.75rem"
+                    >$80</span
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td
                   style="
-                    width: 64px;
-                    height: 64px;
-                    object-fit: cover;
-                    border-radius: 4px;
-                    display: block;
+                    padding: 0.5rem;
+                    text-align: center;
+                    vertical-align: middle;
                   "
-                />
-              </td>
-              <td>Lifewit</td>
-              <td class="cross"><span>✗</span></td>
-              <td class="cross"><span>✗</span></td>
-              <td class="cross"><span>✗</span></td>
-              <td class="cross"><span>✗</span></td>
-
-              <td
-                style="
-                  color: var(--ink-muted);
-                  font-size: 0.8rem;
-                  min-width: 85px;
-                "
-              >
-                Budget<br /><span
-                  style="color: var(--ink-faint); font-size: 0.75rem"
-                  >$70</span
                 >
-              </td>
-            </tr>
+                  <img
+                    src="images/competitors/hoobro.jpg"
+                    style="
+                      width: 64px;
+                      height: 64px;
+                      object-fit: cover;
+                      border-radius: 4px;
+                      display: block;
+                    "
+                  />
+                </td>
+                <td>Hoobro</td>
+                <td class="cross"><span>✗</span></td>
+                <td class="cross"><span>✗</span></td>
+                <td class="check"><span>✓</span></td>
+                <td class="check"><span>✓</span></td>
 
-            <tr class="this-design">
-              <td
-                style="
-                  padding: 0.5rem;
-                  text-align: center;
-                  vertical-align: middle;
-                "
-              >
-                <img
-                  src="images/competitors/this_design.png"
+                <td
                   style="
-                    width: 64px;
-                    height: 64px;
-                    object-fit: cover;
-                    border-radius: 4px;
-                    display: block;
+                    color: var(--ink-muted);
+                    font-size: 0.8rem;
+                    min-width: 85px;
                   "
-                />
-              </td>
-              <td style="font-weight: bold; color: #3d5a3e">This design</td>
-              <td class="check"><span>✓</span></td>
-              <td class="check"><span>✓</span></td>
-              <td class="check"><span>✓</span></td>
-              <td class="check"><span>✓</span></td>
-
-              <td
-                style="
-                  color: var(--ink-muted);
-                  font-size: 0.8rem;
-                  font-weight: 500;
-                "
-              >
-                Mid<br /><span
-                  style="color: var(--ink-faint); font-size: 0.75rem"
-                  >~$249–399</span
                 >
-              </td>
-            </tr>
-          </tbody>
-        </table>
+                  Budget<br /><span
+                    style="color: var(--ink-faint); font-size: 0.75rem"
+                    >$115</span
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td
+                  style="
+                    padding: 0.5rem;
+                    text-align: center;
+                    vertical-align: middle;
+                  "
+                >
+                  <img
+                    src="images/competitors/ebern_designs.jpg"
+                    style="
+                      width: 64px;
+                      height: 64px;
+                      object-fit: cover;
+                      border-radius: 4px;
+                      display: block;
+                    "
+                  />
+                </td>
+                <td>Ebern Designs</td>
+                <td class="cross"><span>✗</span></td>
+                <td class="cross"><span>✗</span></td>
+                <td class="check"><span>✓</span></td>
+                <td class="cross"><span>✗</span></td>
+
+                <td
+                  style="
+                    color: var(--ink-muted);
+                    font-size: 0.8rem;
+                    min-width: 85px;
+                  "
+                >
+                  Mid<br /><span
+                    style="color: var(--ink-faint); font-size: 0.75rem"
+                    >$250</span
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td
+                  style="
+                    padding: 0.5rem;
+                    text-align: center;
+                    vertical-align: middle;
+                  "
+                >
+                  <img
+                    src="images/competitors/litter_robot.jpg"
+                    style="
+                      width: 64px;
+                      height: 64px;
+                      object-fit: cover;
+                      border-radius: 4px;
+                      display: block;
+                    "
+                  />
+                </td>
+                <td>Litter-Robot (automatic)</td>
+                <td class="cross"><span>✗</span></td>
+                <td class="check"><span>✓</span></td>
+                <td class="cross"><span>✗</span></td>
+                <td class="cross"><span>✗</span></td>
+
+                <td
+                  style="
+                    color: var(--ink-muted);
+                    font-size: 0.8rem;
+                    min-width: 85px;
+                  "
+                >
+                  Premium<br /><span
+                    style="color: var(--ink-faint); font-size: 0.75rem"
+                    >$600–900</span
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td
+                  style="
+                    padding: 0.5rem;
+                    text-align: center;
+                    vertical-align: middle;
+                  "
+                >
+                  <img
+                    src="images/competitors/lifewit.jpg"
+                    style="
+                      width: 64px;
+                      height: 64px;
+                      object-fit: cover;
+                      border-radius: 4px;
+                      display: block;
+                    "
+                  />
+                </td>
+                <td>Lifewit</td>
+                <td class="cross"><span>✗</span></td>
+                <td class="cross"><span>✗</span></td>
+                <td class="cross"><span>✗</span></td>
+                <td class="cross"><span>✗</span></td>
+
+                <td
+                  style="
+                    color: var(--ink-muted);
+                    font-size: 0.8rem;
+                    min-width: 85px;
+                  "
+                >
+                  Budget<br /><span
+                    style="color: var(--ink-faint); font-size: 0.75rem"
+                    >$70</span
+                  >
+                </td>
+              </tr>
+
+              <tr class="this-design">
+                <td
+                  style="
+                    padding: 0.5rem;
+                    text-align: center;
+                    vertical-align: middle;
+                  "
+                >
+                  <img
+                    src="images/competitors/this_design.png"
+                    style="
+                      width: 64px;
+                      height: 64px;
+                      object-fit: cover;
+                      border-radius: 4px;
+                      display: block;
+                    "
+                  />
+                </td>
+                <td style="font-weight: bold; color: #3d5a3e">This design</td>
+                <td class="check"><span>✓</span></td>
+                <td class="check"><span>✓</span></td>
+                <td class="check"><span>✓</span></td>
+                <td class="check"><span>✓</span></td>
+
+                <td
+                  style="
+                    color: var(--ink-muted);
+                    font-size: 0.8rem;
+                    font-weight: 500;
+                  "
+                >
+                  Mid<br /><span
+                    style="color: var(--ink-faint); font-size: 0.75rem"
+                    >~$249–399</span
+                  >
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
         <p>
           Most enclosures solve one thing: hiding the litter box. No competitor
           addresses waste bin storage. A few address litter tracking, but a
