@@ -591,6 +591,13 @@
         margin-bottom: 1rem;
         line-height: 1.5;
       }
+      .persona-bio {
+        font-size: 0.875rem;
+        color: var(--ink-muted);
+        line-height: 1.65;
+        margin-top: 0.75rem;
+        margin-bottom: 0;
+      }
       .persona-attrs {
         display: flex;
         flex-wrap: wrap;
@@ -1476,20 +1483,29 @@
 
         <h3>User insights</h3>
         <p>
-          Reviewing community discussions and walkthroughs of how real cat
-          owners manage their setups revealed two consistent patterns:
+          Litter tracking is universal regardless of litter type. Fine-grain
+          clays and crystals cling to paws and spread up to 20 feet from the
+          box; heavier pellets drop within 2 feet but still scatter at the exit.
+          The standard fix is a mat — but the mat only shifts the problem. It
+          wastes floor space, creates an obstacle, and becomes another surface
+          to clean. Owners consistently said they'd rather vacuum a contained
+          corridor than chase litter across the house.
         </p>
         <p>
-          Litter tracking is universal regardless of type — fine-grain litters
-          like clay or crystal cling to paws for up to 20 feet, while heavier
-          pellets drop within 2 feet but still need a mat at the exit. The mat
-          itself becomes a problem: wasted floor space, an obstacle to step
-          over, another surface to clean. Owners consistently said they'd rather
-          vacuum a contained corridor than chase litter across their home.
-          Secondly, almost every setup looks identical: litter box, some
-          concealment, a waste bin in the open, all sitting on a mat that only
-          partially helps. The problem is systemic — no product on the market
-          fully conceals the litter setup and passes as real furniture.
+          The setups themselves follow a familiar pattern: litter box, some form
+          of concealment, a waste bin left in the open, and a mat that only
+          partially helps. When off-the-shelf options fall short, owners turn to
+          DIY — cutting cat doors into unused closet walls, lining the inside
+          with pee pads, or drilling holes into IKEA shelving. These solutions
+          work, but they require time, tools, and a willingness to modify your
+          home.
+        </p>
+        <p>
+          The root problem is that no product on the market fully contains the
+          litter setup and passes as real furniture. I went through every stage
+          of this myself. The design in this case study is what I wish had
+          existed from the start — so new cat owners don't have to spend the
+          time and money finding out the hard way.
         </p>
       </section>
 
@@ -1498,51 +1514,55 @@
         <p class="section-label">Who This Is For</p>
         <h2>The primary user</h2>
         <p>
-          The design targets a specific type of cat owner — one who has already
-          tried the standard progression of solutions and is still unsatisfied.
-          They're not looking for a novelty product. They want something that
-          solves the problem completely and doesn't embarrass them
-          aesthetically.
+          This design is grounded in personal experience. I'm the target user —
+          a cat owner who has cycled through every common solution and found
+          each one lacking in a different way. The persona below is drawn
+          directly from that experience, not extrapolated from demographics.
         </p>
         <div class="persona-card">
           <div class="persona-avatar">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="lucide lucide-user-icon lucide-user"
-            >
-              <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
-              <circle cx="12" cy="7" r="4" />
-            </svg>
+            <img
+              src="images/kumo_pfp_512.JPG"
+              style="width: 64px; height: 64px; border-radius: 50%"
+            />
           </div>
           <div>
-            <p class="persona-name">The Design-Conscious Cat Owner</p>
+            <p class="persona-name">
+              The Cat Owner Who Has Already Tried Everything
+            </p>
             <p class="persona-role">
-              27–38 · Urban apartment, 600–900 sq ft · One or two cats ·
-              $65K–$110K income
+              25 · Living with family · Townhome · Two cats · Tofu litter
             </p>
             <p class="persona-need">
-              "I want to keep my living space clean and intentional, but every
-              litter solution I've tried either looks obviously cat-related or
-              only solves part of the problem — and I'm still finding litter on
-              my couch."
+              "It feels like the whole category is built to look like a solution
+              without actually being one."
             </p>
-            <div class="persona-attrs">
-              <span class="tag">Has tried litter mats</span>
-              <span class="tag">Has tried enclosures</span>
-              <span class="tag">Curates their living space</span>
-              <span class="tag">Shops IKEA, CB2, West Elm</span>
-              <span class="tag"
-                >Wants furniture that grows with their life</span
-              >
-              <span class="tag">Not interested in cat-themed décor</span>
+            <p class="persona-bio">
+              I switched to tofu litter specifically to reduce tracking — it
+              helped, but I still find pieces several feet away a few times a
+              week. I can't put a mat at the exit because one of my cats pees on
+              it. The enclosure I own has a drawer that's half dead space, and
+              no room for the waste bin — something I didn't think about until
+              after buying it. Every furniture company just shows the litter
+              box; no one shows where the trash goes. So the bin sits outside:
+              an eyesore, and another thing to step around.
+            </p>
+            <p class="persona-bio" style="margin-top: 0.5rem">
+              When I moved back home after college, my parents allowed me to
+              adopt cats — something I don't take lightly. Every piece of litter
+              on the floor, every obstacle in a shared hallway, is someone
+              else's problem to deal with. That accountability raised the bar
+              for what "good enough" actually means.
+            </p>
+            <div class="persona-attrs" style="margin-top: 0.75rem">
+              <span class="tag">Tried pine and tofu litter</span>
+              <span class="tag">Owns a litter box enclosure</span>
+              <span class="tag">Cat pees on litter mats — can't use them</span>
+              <span class="tag">Still finds stray litter 2–3× a week</span>
+              <span class="tag">Waste bin doesn't fit — sits outside the enclosure</span>
+              <span class="tag">Half the enclosure drawer is dead space</span>
+              <span class="tag">Shared home — cleanliness affects others</span>
+              <span class="tag">Wants furniture, not cat furniture</span>
             </div>
           </div>
         </div>
@@ -1708,8 +1728,7 @@
                 litter box size, waste bin size, ventilation, cat accessibility,
                 apartment-sized footprint, owner storage utility, and modular
                 finishes. These drove every dimension in the CAD model rather
-                than being retrofitted later. See the constraints section above
-                for the full breakdown.
+                than being retrofitted later.
               </p>
             </div>
           </div>
@@ -1768,12 +1787,12 @@
         </div>
 
         <p>
-          The enclosure is built from 18mm, 20mm, and 36mm particle board,
-          joined via cam-lock hardware for flat-pack assembly — the same
-          construction method as IKEA's cabinet lines. The design shares IKEA's
-          core principle: well-made, functional furniture that is affordable to
-          as many people as possible, with surfaces that are individually
-          swappable rather than requiring a full replacement.
+          The enclosure is built from particle board joined via cam-lock
+          hardware for flat-pack assembly — the same construction method as
+          IKEA's cabinet lines. The design shares IKEA's core principle:
+          well-made, functional furniture that is affordable to as many people
+          as possible, with surfaces that are individually swappable rather than
+          requiring a full replacement.
         </p>
 
         <h3>Bill of materials</h3>
@@ -2373,7 +2392,7 @@
         <p>
           At a target retail price of ~$349 in a flat-pack format, the enclosure
           sits above commodity enclosures ($50–$150) but well below the
-          automatic litter box segment ($500–$900). It earns its price through
+          automatic litter box segment ($600–$900). It earns its price through
           solved problems rather than electronics — and can reach buyers through
           both pet-specialty and home furnishing channels simultaneously.
         </p>
