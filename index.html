@@ -230,13 +230,18 @@
 
       .problem-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        grid-template-columns: repeat(4, 1fr);
         gap: 1px;
         background: var(--rule);
         border: 1px solid var(--rule);
         border-radius: 6px;
         overflow: hidden;
         margin: 2rem 0;
+      }
+      @media (max-width: 900px) {
+        .problem-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
       }
       @media (max-width: 640px) {
         .problem-grid {
@@ -611,6 +616,14 @@
         align-items: center;
         font-size: 0.8rem;
         color: var(--ink-faint);
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+        transition: opacity 0.2s ease;
+      }
+      a:hover {
+        opacity: 0.75;
       }
 
       .two-col-img {
@@ -1404,7 +1417,7 @@
           Secondly, almost every setup looks identical: litter box, some
           concealment, a waste bin in the open, all sitting on a mat that only
           partially helps. The problem is systemic — no product on the market
-          fully conceals the litter setup and passes as real furniture."
+          fully conceals the litter setup and passes as real furniture.
         </p>
       </section>
 
@@ -1420,7 +1433,23 @@
           aesthetically.
         </p>
         <div class="persona-card">
-          <div class="persona-avatar">A</div>
+          <div class="persona-avatar">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-user-icon lucide-user"
+            >
+              <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+              <circle cx="12" cy="7" r="4" />
+            </svg>
+          </div>
           <div>
             <p class="persona-name">The Design-Conscious Cat Owner</p>
             <p class="persona-role">
@@ -1503,7 +1532,7 @@
                 "
                 >Option A — Rejected</span
               >
-              Waste bin compartment and slide-out litter box.
+              Smaller footprint with front entry and vertical drawer stack.
             </p>
           </div>
           <div class="diagram-frame" style="margin: 0">
@@ -1595,8 +1624,8 @@
               <p>
                 Before sketching, I listed every object in a typical cat owner's
                 litter setup: box, enclosure, mat, waste bin, scooper, cleaning
-                supplies, cat supplies. The design brief became: contain all of
-                it in one piece of furniture.
+                supplies. The design brief became: contain all of it in one
+                piece of furniture.
               </p>
             </div>
           </div>
@@ -1609,8 +1638,8 @@
                 litter box size, waste bin size, ventilation, cat accessibility,
                 apartment-sized footprint, owner storage utility, and modular
                 finishes. These drove every dimension in the CAD model rather
-                than being retrofitted later. See the Research section for the
-                full constraint breakdown.
+                than being retrofitted later. See the constraints section above
+                for the full breakdown.
               </p>
             </div>
           </div>
@@ -1669,14 +1698,12 @@
         </div>
 
         <p>
-          The enclosure is designed around 18mm, 20mm, and 36mm furniture-grade
-          MDF panels — the same material and finish language as IKEA's shelf
-          lines. Panels join via cam-lock hardware for flat-pack assembly. I
-          took lots of inspiration from IKEA's design language and resonate with
-          IKEA's goal and modular design language by offering well-designed,
-          functional, sustainable, and affordable home furnishings through
-          democratic design, ensuring products are affordable to as many people
-          as possible.
+          The enclosure is built from 18mm, 20mm, and 36mm particle board,
+          joined via cam-lock hardware for flat-pack assembly — the same
+          construction method as IKEA's cabinet lines. The design shares IKEA's
+          core principle: well-made, functional furniture that is affordable to
+          as many people as possible, with surfaces that are individually
+          swappable rather than requiring a full replacement.
         </p>
 
         <h3>Bill of materials</h3>
@@ -1942,13 +1969,13 @@
               <h3>U-shaped maze corridor</h3>
               <p>
                 The single most effective change was rethinking the entry path.
-                By replacing the traditional straight exit with a U-shaped
-                internal maze, introducing three distinct direction changes,
-                effectively eliminates the 'straight-shot' exit that fuels
-                tracking. Integrated short tactile 'lips' at every turn force a
-                natural shift in gait, ensuring litter is deposited deep within
-                the enclosure’s interior long before the cat reaches your
-                floors.
+                A traditional straight exit lets a cat leave in one or two
+                strides — and litter follows. Replacing it with a U-shaped
+                corridor introduces three forced direction changes, breaking the
+                straight-shot exit that causes tracking. Short tactile lips at
+                each turn shift the cat’s gait and two strips of honeycomb
+                trapping mats (accessories) lining the floor guarantee all loose
+                litter is deposited inside the maze.
               </p>
               <p>
                 The trade-off is footprint. The U-shape adds width. But the
@@ -1982,14 +2009,14 @@
           <div>
             <div class="feature-number">02</div>
             <div class="feature-text">
-              <h3>Waste bin area accomodation</h3>
+              <h3>Built-in waste bin compartment</h3>
               <p>
-                Area for the litter waste bin is accounted for in the design — a
-                Litter Genie, Litter Zero, or equivalent. This is the detail
-                every competing product omits entirely. No enclosure on the
-                market includes an area designated for the litter waste bin. It
-                is enclosed, accessible next to the litter box, and hidden
-                behind a door to maintain the furniture aesthetic.
+                Every competing enclosure hides the litter box and leaves the
+                waste bin sitting in the open. This design accounts for it from
+                the start — a dedicated compartment fits a Litter Genie, Litter
+                Zero, or equivalent, enclosed behind a door, accessible
+                alongside the litter box. The waste bin is finally off the floor
+                and out of sight.
               </p>
             </div>
           </div>
@@ -2000,13 +2027,15 @@
           <div>
             <div class="feature-number">03</div>
             <div class="feature-text">
-              <h3>Storage</h3>
+              <h3>Generous owner storage</h3>
               <p>
-                Not a single volume of the furniture is wasted. There are a
-                total of 4 enclosed storage areas: 3 drawers at the top, and 1
-                shelf above the maze. Each section can easily fit 60 small puck
-                cat wet food cans - that's a total storage volume equivalent to
-                over 240 cans of food.
+                No volume is wasted. Four enclosed storage areas — three drawers
+                at the top and one shelf above the maze — give back the floor
+                space the enclosure takes. Each drawer fits over 60 small wet
+                food cans with room to spare. In practice that means cat
+                supplies, cleaning tools, or anything else you'd otherwise leave
+                on a shelf. The enclosure earns its footprint in both
+                directions.
               </p>
             </div>
           </div>
@@ -2041,13 +2070,12 @@
               <p>
                 An enclosed litter space traps ammonia — the primary odour
                 compound in cat waste. Left unaddressed, buildup discourages
-                cats from using the box. The enclosure uses a passive
-                ventilation path: a row of ventilation holes along the top of
-                the back panel. There are holes on the column walls at the
-                height of the ventialtion holes to mount accessory trays for
-                Zeolite bags or chemical free lump charcoal to absorb ammonia
-                and odors. The grills are hidden behind the furniture for no
-                aesthetic compromise.
+                cats from using the box. A row of ventilation holes runs along
+                the top of the back panel, with matching holes on the interior
+                column walls at the same height. These accept accessory trays
+                for zeolite bags or loose charcoal, absorbing ammonia without
+                powered fans or visible grilles. The vents sit behind the
+                furniture — no aesthetic compromise.
               </p>
             </div>
           </div>
@@ -2058,16 +2086,15 @@
           <div>
             <div class="feature-number">05</div>
             <div class="feature-text">
-              <h3>Modern minimal design</h3>
+              <h3>Hardware-free front face</h3>
               <p>
-                The drawers and doors use push-to-open latches to keep the front
-                face to create a flush, handle-free look. Modern furniture
-                design great for Japandi and Scandinavian aesthetics. The design
-                is intentionally minimal and hardware-free to blend into a
-                variety of interior styles without looking like a cat product.
-                The only visible difference at a glance is a cutout on the side
-                of the furniture. Otherwise, from the front, it looks nothing
-                like cat furniture.
+                Drawers and doors use push-to-open latches, keeping the entire
+                front face flush and handle-free. The result reads as furniture
+                — Japandi, Scandinavian, or contemporary — not as a cat product.
+                From the front, nothing gives it away. The only visible signal
+                is a rounded cutout on the right side panel: the cat's entry.
+                Everything else is indistinguishable from a credenza you'd find
+                in a living room.
               </p>
             </div>
           </div>
@@ -2094,21 +2121,20 @@
           <div>
             <div class="feature-number">06</div>
             <div class="feature-text">
-              <h3>Modular legs</h3>
+              <h3>Swappable legs</h3>
               <p>
-                The enclosure sits on swappable legs rather than a fixed base
-                that can serve three purposes. You can swap the legs for
-                different heights, style, and lengths to match aesthetics of
-                your space. Second, and more practically, shorter legs lower the
-                step-up height for senior or mobility-limited cats who may
-                struggle to enter a raised enclosure, removing a barrier to
-                consistent litter box use without changing anything else about
-                the design.
+                The enclosure sits on swappable legs rather than a fixed base.
+                Leg height serves two purposes at once: aesthetic and
+                functional. Shorter legs lower the entry step-up height, making
+                the box accessible to senior or mobility-limited cats without
+                changing anything else about the design. Taller legs open up
+                ground clearance — enough to clean underneath or fit a robot
+                vacuum charging dock.
               </p>
               <p>
-                You can even swap for slightly taller legs for better ground
-                clearance to clean below the furniture or house a robot vacuum
-                charging station.
+                Leg style is independently swappable too, so the same cabinet
+                body can shift between a tapered mid-century silhouette and a
+                low-profile Scandinavian look just by changing the legs.
               </p>
             </div>
           </div>
@@ -2122,11 +2148,11 @@
               <h3>Usable top surface</h3>
               <p>
                 The top of the enclosure is flat, clean, and load-bearing —
-                designed for plants, books, a lamp, or any decorative items that
-                make a surface feel intentional rather than incidental. The
-                enclosure earns its floor space by functioning as furniture in
-                both directions. You could even leave out the tabletop entirely
-                to save on cost.
+                designed for plants, books, a lamp, or any decorative object
+                that makes the surface feel intentional. The tabletop is
+                swappable, so owners can change the finish without replacing the
+                whole piece. If budget is a consideration, it can be left off
+                entirely.
               </p>
             </div>
           </div>
@@ -2182,7 +2208,7 @@
           <tbody>
             <tr>
               <td>Approximate footprint</td>
-              <td>126cm × 52cm × 80cm &nbsp;</td>
+              <td>126cm × 52cm × 80cm</td>
             </tr>
             <tr>
               <td>Interior litter headspace</td>
@@ -2212,13 +2238,16 @@
             </tr>
             <tr>
               <td>Litter box capacity</td>
-              <td>Accomodates 60cm x 40cm footprint with room for waste bin</td>
+              <td>
+                Accommodates 60cm × 40cm litter box footprint, with space for
+                waste bin alongside
+              </td>
             </tr>
             <tr>
               <td>Waste bin compartment</td>
               <td>
-                Accomodates 27cm x 27cm footprint with room for large litter box
-                footprint
+                Accommodates 27cm × 27cm waste bin footprint (Litter Genie /
+                Litter Zero)
               </td>
             </tr>
             <tr>
@@ -2242,54 +2271,51 @@
       <section>
         <p class="section-label">Market Opportunity</p>
         <h2>Why this product has a clear path to market</h2>
-        <p class="sample-notice">
-          <strong>Sample content</strong> Verify these figures against the
-          latest APPA Pet Industry Market Size report and Statista before using
-          in a pitch. The ~$150B and ~46M figures are approximate 2024
-          estimates.
-        </p>
         <div class="opportunity-grid">
           <div class="opp-card">
-            <div class="opp-number">~$150B</div>
-            <div class="opp-label">US pet industry annual revenue (2024)</div>
+            <div class="opp-number">~$165B</div>
+            <div class="opp-label">US pet industry annual revenue</div>
           </div>
           <div class="opp-card">
             <div class="opp-number">~46M</div>
             <div class="opp-label">Cat-owning households in the US</div>
           </div>
           <div class="opp-card">
-            <div class="opp-number">$0</div>
+            <div class="opp-number">0</div>
             <div class="opp-label">
               Products that solve all four problems today
             </div>
           </div>
         </div>
         <p>
-          The automatic litter box market — products like Litter-Robot — has
-          proven that cat owners will pay a significant premium for a solution
-          that reduces daily maintenance effort. This design targets the same
-          buyer at a lower price point, without requiring power, connectivity,
-          or proprietary consumables.
+          The automatic litter box market—products like Litter-Robot—has proven
+          that owners will pay a premium to reduce daily maintenance, a
+          significant "utility gap" exists for those seeking high-performance
+          hygiene without the failure points of electronics or proprietary
+          consumables.
         </p>
+
         <p>
-          The aesthetic positioning also opens a distribution channel that no
-          current litter enclosure occupies: home furnishing retailers. Brands
-          like IKEA, West Elm, and Crate &amp; Barrel already sell furniture to
-          the exact demographic who owns cats and cares about how their home
-          looks. No litter product currently lives in that aisle.
+          This design occupies a "White Space" in distribution: the high-end
+          home furnishing aisle. While retailers like
+          <strong>IKEA, West Elm, and Crate & Barrel</strong> have entered the
+          pet market, their offerings remain focused on "soft goods" (beds and
+          bowls). No current product in this channel addresses the mechanical
+          reality of litter tracking. By bridging the gap between
+          furniture-grade aesthetics and engineered utility, this enclosure
+          captures the urban "roommate" demographic that views pet gear as home
+          infrastructure.
         </p>
-        <p class="sample-notice">
-          <strong>Sample content</strong> Replace the paragraph below with your
-          actual pricing rationale. Is this an IKEA flat-pack at ~$249, a
-          mid-market piece at ~$499, or a premium CB2-tier product at $800+?
-        </p>
+
         <p>
-          At a target retail price of ~$349 in a flat-pack format, the enclosure
-          sits above commodity enclosures ($50–$150) but well below the
-          automatic litter box segment ($500–$700). It earns its price through
-          solved problems rather than electronics — and can be distributed
-          through both pet specialty and home furnishing channels
-          simultaneously.
+          At a target retail price of <strong>~$349</strong> in a flat-pack
+          format, the enclosure sits strategically between commodity cabinets
+          ($50–$150) and high-end robotics ($500–$900). It earns its premium
+          margin by solving the "tracking tax"—the perpetual labor of cleaning
+          stray litter—through
+          <strong>passive behavioral geometry</strong> rather than high-cost
+          sensors, allowing for simultaneous distribution through both
+          pet-specialty and lifestyle retail channels.
         </p>
       </section>
 
@@ -2332,14 +2358,22 @@
               A physical prototype would validate the maze corridor dimensions
               against real cats — specifically whether the U-turn geometry
               eliminates litter tracking with any litter type. Additionally I'd
-              like to explore designing a shorter and or front entry variant
-              better for tight spaces, a multi-cat friendly variant, and taller
-              cabin room for larger automatic litter robots, all without
+              like to explore designing a shorter front-entry variant better for
+              tight spaces, a multi-cat friendly variant, and taller interior
+              clearance for larger automatic litter boxes, all without
               compromising functionality and aesthetics.
             </p>
           </div>
         </div>
       </section>
+
+      <!-- Added sources of everything? including competitors? -->
+      <!--  Reference Data for your Appendix:
+US Pet Industry Annual Revenue (2026 Proj): $165.6 Billion (Source: Mordor Intelligence, US Pet Market Analysis 2026-2031)
+
+Cat-Owning Households in the US: 46.5 Million (Source: APPA National Pet Owners Survey / Catster 2026 Update)
+
+Global Pet Furniture Market Size (2026 Proj): $7.95 Billion (Source: Coherent Market Insights, Global Pet Furniture Market Size & Trends 2026-2033)-->
 
       <!-- TAGS -->
       <section style="border-bottom: none; padding-bottom: 0">
@@ -2353,7 +2387,14 @@
 
     <footer>
       <span>Product Design Engineering — 2026</span>
-      <span>Concept &amp; CAD by Nicholas Chan</span>
+      <span
+        >© 2026
+        <a href="https://www.linkedin.com/in/nicholaschan23/">Nicholas Chan</a>.
+        Licensed under
+        <a href="https://creativecommons.org/licenses/by-nc/4.0/"
+          >CC BY-NC 4.0</a
+        >.</span
+      >
     </footer>
   </body>
 </html>
