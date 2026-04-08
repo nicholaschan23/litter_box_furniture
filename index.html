@@ -1303,9 +1303,10 @@
             <div class="process-step-body">
               <h4>Must fit a large litter box</h4>
               <p>
-                The interior chamber needed to accommodate a large litter box
-                around 22" x 18" x 10". This set the minimum interior width and
-                depth of the litter compartment.
+                The interior chamber needed to accommodate a large litter box —
+                approximately 56cm × 46cm × 25cm (22″ × 18″ × 10″). This set the
+                minimum interior width, depth, and headspace of the litter
+                compartment.
               </p>
             </div>
           </div>
@@ -1325,9 +1326,10 @@
               <h4>Must accommodate a litter waste bin</h4>
               <p>
                 The Litter Genie and Litter Zero are the most common dedicated
-                litter waste bins. Their dimensions set the minimum space needed
-                alongside the litter box. This was non-negotiable — it was the
-                core gap the entire design was built to close.
+                litter waste bins, with a footprint of approximately 27cm × 27cm
+                (10.6″ × 10.6″). Their dimensions set the minimum additional
+                space needed alongside the litter box. This was non-negotiable —
+                it was the core gap the entire design was built to close.
               </p>
             </div>
           </div>
@@ -1371,25 +1373,19 @@
               C4
             </div>
             <div class="process-step-body">
-              <h4>
-                The exit corridor must guarantee a minimum number of paw
-                contacts before the cat leaves
-              </h4>
+              <h4>No litter tracking beyond the exit</h4>
               <p>
-                Reducing litter tracking is not a measurable constraint —
-                Minimum Unique Paw Contacts (MUPC) and Stride Cycle Interruption
-                are. Peer-reviewed feline locomotion research establishes that
-                domestic cats maintain a "direct-registering" gait, where the
-                hind paw lands nearly identical to the forepaw print. a
-                straight-shot corridor fails to dislodge debris because it
-                allows the cat to "skip" through the enclosure with minimal
-                ground contact.
+                "Reduce litter tracking" is not a measurable constraint — path
+                length is. Peer-reviewed feline locomotion research records
+                domestic cat stride lengths of 36–47 cm at a normal walking
+                pace, with each individual paw placement covering roughly 9–12
+                cm of ground. A straight corridor fails regardless of length:
+                cats traverse it in a few strides without decelerating, and
+                litter clings through the exit.
               </p>
               <p>
-                In a standard walking pace (stride length of 36–48 cm),
-                mechanical dislodgment of litter requires a minimum of three
-                full stride cycles (108-144 cm) or across a textured or
-                gait-interrupting surface resulting in a MUPC of 12 or more.
+                Sufficient mechanical dislodgment of litter requires a minimum
+                of three full stride cycles (108-144 cm) or 12 steps.
               </p>
             </div>
           </div>
@@ -1673,11 +1669,11 @@
 
         <h3>Ideation &amp; early decisions</h3>
         <p>
-          Three layout concepts were developed and evaluated against the seven
+          Three layout concepts were developed and evaluated against the nine
           design constraints before committing to CAD.
         </p>
 
-        <!-- Option cards — images only, labels as eyebrows, prose below -->
+        <!-- Option cards -->
         <div
           style="
             display: grid;
@@ -1804,11 +1800,11 @@
             <div class="process-step-body">
               <h4>Establish non-negotiable constraints</h4>
               <p>
-                Eight constraints were locked before any layout decisions:
-                litter box size, waste bin size, ventilation, cat accessibility,
-                apartment-sized footprint, owner storage utility, modular
-                finishes, and a measurable corridor geometry for litter
-                trapping. These drove every dimension in the CAD model rather
+                Nine constraints were locked before any layout decisions,
+                ordered by priority: litter box size, waste bin dimensions, cat
+                accessibility, measurable corridor geometry for litter trapping,
+                furniture aesthetics, footprint, owner storage, ventilation, and
+                modularity. These drove every dimension in the CAD model rather
                 than being retrofitted later.
               </p>
             </div>
@@ -2136,22 +2132,25 @@
           <div>
             <div class="feature-number">01</div>
             <div class="feature-text">
-              <h3>U-shaped maze litter trap</h3>
+              <h3>U-shaped maze corridor</h3>
               <p>
-                The single most effective change was rethinking the entry path.
-                The design utilizes Gait-Triggered Deceleration as a mechanical
-                multiplier. Using a U-shaped corridor introduces three turns
-                forcing stride compression—a 40–60% reduction in forward
-                vector—requiring the cat to slow, reorient, and re-accelerate.
-                The gait interruption can add about 2-4 additional unique paw
-                contacts (roughly half to one full extra stride cycle). A
-                walking path of 60cm (6 steps) with 3 turns (6-8 steps) results
-                in 10 to 14 paw contacts to ensure zero litter escape on exit.
+                The single most effective change was rethinking the exit path.
+                C4 sets the target: 12 steps before the cat reaches open floor.
+                A straight corridor can't get there without an impractical
+                length — at 36–47 cm per stride, hitting 12 steps in a straight
+                line would require 108–144 cm of corridor, consuming too much of
+                the overall footprint. The U-shape solves this by introducing
+                three forced direction changes. At each turn the cat
+                decelerates, reorients, and re-accelerates — each pivot
+                compresses stride length and adds 2–4 extra paw contacts that a
+                straight path of the same length would never achieve. The maze
+                reaches the 12-step threshold in a fraction of the straight-line
+                distance, which is what makes the compact footprint viable.
               </p>
               <p>
-                The trade-off is footprint. The U-shape adds width. But the
-                calculus is clear: it is far preferable to vacuum a contained
-                corridor than to find litter all around your house.
+                The trade-off is width, not length. The U-shape adds lateral
+                space. But the calculus is clear: it is far preferable to vacuum
+                a contained corridor than to find litter across your home.
               </p>
             </div>
           </div>
@@ -2161,9 +2160,9 @@
               style="width: 100%; display: block"
             />
             <p class="diagram-caption">
-              The white arrow shows the path cats will take to exit. In reality,
-              cats may take the shortest path and it'll be more diagonal, like a
-              V-shape.
+              Intended exit path (white arrow). In practice cats tend to cut the
+              corners, taking a more diagonal line — which still requires
+              direction changes and floor contact throughout.
             </p>
           </div>
         </div>
@@ -2545,6 +2544,14 @@
             </tr>
           </thead>
           <tbody>
+            <tr>
+              <td>Domestic cat stride length</td>
+              <td>
+                Beloozerova et al.,
+                <em>Head Movement During Walking in the Cat</em>, PMC4986613
+                (2016)
+              </td>
+            </tr>
             <tr>
               <td>Feline litter box headspace and ergonomic minimums</td>
               <td>
