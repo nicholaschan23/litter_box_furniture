@@ -466,8 +466,12 @@ footer {
   color: var(--ink);
   vertical-align: top;
 }
+.spec-table th:first-child {
+  width: 30%;
+}
 .spec-table td:first-child {
   font-weight: 500;
+  width: 30%;
 }
 .spec-table tr:last-child td {
   border-bottom: none;
