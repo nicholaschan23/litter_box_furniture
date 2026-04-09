@@ -942,12 +942,12 @@
             margin: 1.5rem 0 0.75rem;
           "
         >
-          <div class="diagram-frame" style="margin: 0">
+          <div class="diagram-frame" style="margin: 0; display: flex; flex-direction: column;">
             <img
               src="images/cad/option_a.png"
               style="width: 100%; display: block"
             />
-            <p class="diagram-caption">
+            <p class="diagram-caption" style="flex: 1">
               <span
                 style="
                   display: block;
@@ -963,12 +963,12 @@
               Smaller footprint with front entry and vertical drawer stack.
             </p>
           </div>
-          <div class="diagram-frame" style="margin: 0">
+          <div class="diagram-frame" style="margin: 0; display: flex; flex-direction: column;">
             <img
               src="images/cad/option_b.png"
               style="width: 100%; display: block"
             />
-            <p class="diagram-caption">
+            <p class="diagram-caption" style="flex: 1">
               <span
                 style="
                   display: block;
@@ -986,14 +986,14 @@
           </div>
           <div
             class="diagram-frame"
-            style="margin: 0; border-color: var(--accent-mid)"
+            style="margin: 0; border-color: var(--accent-mid); display: flex; flex-direction: column;"
           >
             <img
               src="images/cad/isometric_view.png"
               alt="Option C — U-shaped maze corridor"
               style="width: 100%; display: block"
             />
-            <p class="diagram-caption" style="background: var(--accent-light)">
+            <p class="diagram-caption" style="flex: 1; background: var(--accent-light)">
               <span
                 style="
                   display: block;
@@ -1405,11 +1405,6 @@
                 straight path of the same length would never achieve. The maze
                 reaches the 12-step threshold in a fraction of the straight-line
                 distance, which is what makes the compact footprint viable.
-              </p>
-              <p>
-                The trade-off is width, not length. The U-shape adds lateral
-                space. But the calculus is clear: it is far preferable to vacuum
-                a contained corridor than to find litter across your home.
               </p>
             </div>
           </div>
