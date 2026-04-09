@@ -158,10 +158,22 @@ footer {
   align-items: center;
   gap: 0;
 }
-.footer-links a + a::before {
+.footer-links a + a::before,
+.footer-links a + button::before,
+.footer-links button + a::before {
   content: "·";
   margin: 0 0.6rem;
   opacity: 0.4;
+}
+.email-copy-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  text-decoration: none;
 }
 @media (max-width: 580px) {
   footer {
