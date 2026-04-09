@@ -485,6 +485,22 @@ footer {
   font-weight: 500;
   width: 30%;
 }
+.spec-table--bom th:first-child,
+.spec-table--bom td:first-child {
+  width: 4%;
+  font-weight: 400;
+}
+.spec-table--bom th:nth-child(4),
+.spec-table--bom td:nth-child(4) {
+  width: 4%;
+}
+.spec-table--ergonomics th:nth-child(2),
+.spec-table--ergonomics td:nth-child(2),
+.spec-table--ergonomics th:nth-child(3),
+.spec-table--ergonomics td:nth-child(3) {
+  width: 10%;
+  min-width: 45px;
+}
 .spec-table tr:last-child td {
   border-bottom: none;
 }
