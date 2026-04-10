@@ -595,7 +595,7 @@
               <p>
                 The Litter Genie and Litter Zero are the most common dedicated
                 litter waste bins, with a footprint of approximately 27cm × 27cm
-                (10.6″ × 10.6″). Their dimensions set the minimum additional
+                (10.5″ × 10.5″). Their dimensions set the minimum additional
                 space needed alongside the litter box. This was non-negotiable —
                 it was the core gap the entire design was built to close.
               </p>
@@ -646,12 +646,12 @@
                 "Reduce litter tracking" is not a measurable constraint — path
                 length is. Peer-reviewed feline locomotion research records
                 domestic cat stride lengths of 36–47 cm at a normal walking
-                pace, with each individual paw placement covering roughly 9–12
-                cm of ground. A straight corridor fails regardless of length:
-                cats traverse it in a few strides without decelerating, and
-                litter clings through the exit. Sufficient mechanical
-                dislodgment of litter requires a minimum of three full stride
-                cycles (108–144 cm) or 12 steps.
+                pace, with each step (individual paw placement) covering roughly
+                9–12 cm of ground. A straight corridor fails regardless of
+                length: cats traverse it in a few strides without decelerating,
+                and litter clings through the exit. Sufficient mechanical
+                dislodgment requires a minimum of 12 steps — equivalent to three
+                full stride cycles (108–144 cm).
               </p>
             </div>
           </div>
@@ -913,15 +913,13 @@
               for what "good enough" actually means.
             </p>
             <div class="persona-attrs" style="margin-top: 0.75rem">
-              <span class="tag">Tried pine and tofu litter</span>
-              <span class="tag">Owns a litter box enclosure</span>
-              <span class="tag">Cat pees on litter mats — can't use them</span>
-              <span class="tag">Still finds stray litter 2–3× a week</span>
-              <span class="tag"
-                >Waste bin doesn't fit — sits outside the enclosure</span
-              >
-              <span class="tag">Half the enclosure drawer is dead space</span>
-              <span class="tag">Shared home — cleanliness affects others</span>
+              <span class="tag">Tried multiple litter types</span>
+              <span class="tag">Already owns an enclosure</span>
+              <span class="tag">Can't use a mat — cat pees on it</span>
+              <span class="tag">Still finds litter 2–3× a week</span>
+              <span class="tag">Waste bin sits out in the open</span>
+              <span class="tag">Drawer is half dead space</span>
+              <span class="tag">Shared home — others live with the mess</span>
               <span class="tag">Wants furniture, not cat furniture</span>
             </div>
           </div>
@@ -1428,18 +1426,13 @@
             <div class="feature-text">
               <h3>U-shaped maze corridor</h3>
               <p>
-                The single most effective change was rethinking the exit path.
-                C4 sets the target: 12 steps before the cat reaches open floor.
-                A straight corridor can't get there without an impractical
-                length — at 36–47 cm per stride, hitting 12 steps in a straight
-                line would require 108–144 cm of corridor, consuming too much of
-                the overall footprint. The U-shape solves this by introducing
-                three forced direction changes. At each turn the cat
-                decelerates, reorients, and re-accelerates — each pivot
-                compresses stride length and adds 2–4 extra paw contacts that a
-                straight path of the same length would never achieve. The maze
-                reaches the 12-step threshold in a fraction of the straight-line
-                distance, which is what makes the compact footprint viable.
+                A straight corridor fails — at 36–47 cm per stride, 12 paw
+                contacts requires 108–144 cm, consuming too much of the overall
+                footprint. The U-shape introduces three forced direction
+                changes; each pivot decelerates the cat and adds 2–4 extra paw
+                contacts a straight path of the same length would never achieve.
+                The rightmost door opens directly into the maze, giving easy
+                access for cleaning.
               </p>
             </div>
           </div>
@@ -1475,7 +1468,7 @@
                 waste bin sitting in the open. This design accounts for it from
                 the start — space is allocated inside the main compartment to
                 fit a litter waste bin alongside the litter box. The bin lives
-                inside the enclosure, behind a door, out of sight.
+                inside the enclosure, behind the two left doors, out of sight.
               </p>
             </div>
           </div>
@@ -1648,74 +1641,120 @@
         </div>
 
         <h3>Design specifications</h3>
-        <table class="spec-table">
+        <table class="spec-table spec-table--design">
           <thead>
             <tr>
               <th>Parameter</th>
               <th>Value</th>
+              <th>Meets</th>
+              <th>Notes</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td>Approximate footprint</td>
-              <td>126cm × 52cm × 80cm</td>
+              <td>126 × 52 × 80 cm</td>
+              <td class="spec-meets">C6 ✓</td>
+              <td>Smallest viable footprint satisfying C1–C5</td>
             </tr>
             <tr>
-              <td>Interior litter box headspace</td>
-              <td>45cm — meets 40 cm minimum</td>
+              <td>Interior litter headspace</td>
+              <td>45 cm</td>
+              <td class="spec-meets">C1, C3 ✓</td>
+              <td>≥ 40 cm minimum</td>
             </tr>
             <tr>
               <td>Maze height</td>
-              <td>29cm — meets 28 cm minimum</td>
+              <td>29 cm</td>
+              <td class="spec-meets">C3 ✓</td>
+              <td>≥ 28 cm minimum</td>
             </tr>
             <tr>
               <td>Maze corridor width</td>
-              <td>20cm — meets 20 cm minimum</td>
+              <td>20 cm</td>
+              <td class="spec-meets">C3 ✓</td>
+              <td>≥ 20 cm minimum</td>
             </tr>
             <tr>
               <td>Maze centerline path length</td>
+              <td>83 cm (U-path), 59 cm (V-path diagonal)</td>
+              <td class="spec-meets">C4 ✓</td>
               <td>
-                83cm (U-path), 59cm (V-path diagonal) — turns add paw contacts
-                beyond raw path length, bringing effective step count to ~12
+                ≥ 12-step minimum — 3 turns add ~8 paw contacts + raw path (~83
+                cm) adds ~7 contacts = ~15 total
               </td>
             </tr>
             <tr>
               <td>Entrance height</td>
-              <td>10cm (without legs) — meets 12.5 cm maximum</td>
+              <td>10 cm (without legs)</td>
+              <td class="spec-meets">C3 ✓</td>
+              <td>
+                ≤ 12.5 cm maximum — short legs (5 cm) recommended for senior cat
+                accessibility; tall legs (15 cm) raise effective entry to 25 cm
+              </td>
+            </tr>
+            <tr>
+              <td>Litter box capacity</td>
+              <td>57 × 47 cm footprint</td>
+              <td class="spec-meets">C1 ✓</td>
+              <td>≥ 56 × 46 cm minimum</td>
+            </tr>
+            <tr>
+              <td>Waste bin capacity</td>
+              <td>27 × 27 cm footprint</td>
+              <td class="spec-meets">C2 ✓</td>
+              <td>≥ 27 × 27 cm minimum</td>
+            </tr>
+            <tr>
+              <td>Front face</td>
+              <td>Push-to-open, no handles, side entry only</td>
+              <td class="spec-meets">C5 ✓</td>
+              <td>
+                No visible cat-themed elements from the front — reads as a
+                credenza
+              </td>
+            </tr>
+            <tr>
+              <td>Owner storage</td>
+              <td>3 drawers + 1 shelf</td>
+              <td class="spec-meets">C7 ✓</td>
+              <td>
+                Justifies footprint to all household members, not just the cat
+                owner
+              </td>
             </tr>
             <tr>
               <td>Ventilation</td>
               <td>Passive — concealed back-panel vents</td>
+              <td class="spec-meets">C8 ✓</td>
+              <td>—</td>
             </tr>
             <tr>
               <td>Leg height</td>
+              <td>Short (5 cm), standard (10 cm), tall (15 cm)</td>
+              <td class="spec-meets">C9 ✓</td>
               <td>
-                Modular — short (5cm), standard (10cm), tall (15cm) variants
+                Swappable — affects entry step-up height and ground clearance
               </td>
             </tr>
             <tr>
               <td>Assembly method</td>
               <td>Flat-pack, cam-lock hardware</td>
-            </tr>
-            <tr>
-              <td>Litter box capacity</td>
-              <td>60cm × 40cm footprint</td>
-            </tr>
-            <tr>
-              <td>Waste bin space</td>
-              <td>27cm × 27cm footprint</td>
+              <td class="spec-meets">C9 ✓</td>
+              <td>—</td>
             </tr>
             <tr>
               <td>Modeled in</td>
-              <td>
-                Onshape — all panels, hardware, and fasteners fully parametric
-              </td>
+              <td>Onshape — fully parametric</td>
+              <td class="spec-meets">—</td>
+              <td>All panels, hardware, and fasteners specified</td>
             </tr>
             <tr>
               <td>Bill of materials</td>
+              <td>33 components</td>
+              <td class="spec-meets">—</td>
               <td>
-                Complete — every screw, cam-lock, and bracket specified with
-                part and quantity
+                Every screw, cam-lock, and bracket with part number and quantity
               </td>
             </tr>
           </tbody>
@@ -1819,8 +1858,9 @@
               eliminates litter tracking with any litter type. I'd also like to
               explore a shorter front-entry variant for tight spaces, a
               multi-cat variant, and a taller interior clearance option for
-              larger automatic litter boxes — all without compromising
-              functionality or aesthetics.
+              larger automatic litter boxes — a natural product lineup for any
+              home furnishing retailer paying attention — all without
+              compromising functionality or aesthetics.
             </p>
           </div>
         </div>
